@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — KAID: Kids AI Dojo</title>
+    <meta name="description"
+        content="KAID privacy policy. We collect no personal data, show no ads, and use no tracking. Safe and private by design.">
+    <link rel="icon" type="image/png" href="assets/triveer-logo.png">
+    <link rel="apple-touch-icon" href="assets/kaid-logo.png">
+    <link rel="canonical" href="https://triveer.ai/privacy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000814;
+            --cyan: #00F7FF;
+            --green: #38FF12;
+            --magenta: #FF40A6;
+            --orange: #FF5F1F;
+            --purple: #B34DFF;
+            --yellow: #FDFF00;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.10);
+            --text: #ffffff;
+            --muted: rgba(255, 255, 255, 0.90);
+            --dim: rgba(255, 255, 255, 0.75);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 64px;
+            background: rgba(0, 8, 20, 0.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            height: 34px;
+            width: 34px;
+            object-fit: contain;
+        }
+
+        @keyframes rainbow-flow {
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .nav-rainbow {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(90deg,
+                    #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+            white-space: nowrap;
+        }
+
+        .nav-rainbow .nav-kaid {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .nav-rainbow .nav-sep {
+            font-weight: 400;
+            font-size: 0.82rem;
+            opacity: 0.6;
+        }
+
+        .nav-rainbow .nav-sub {
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+
+        .nav-powered {
+            font-size: 0.58rem;
+            color: var(--dim);
+            letter-spacing: 0.04em;
+            margin-top: 1px;
+        }
+
+        .nav-back {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 100px;
+            padding: 7px 18px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+
+        /* ── HERO BANNER ── */
+        .pp-hero {
+            text-align: center;
+            padding: 80px 24px 56px;
+            background: linear-gradient(180deg, rgba(0, 247, 255, 0.04) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .pp-label {
+            display: inline-block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            border: 1px solid rgba(0, 247, 255, 0.28);
+            border-radius: 100px;
+            padding: 5px 16px;
+            margin-bottom: 20px;
+        }
+
+        .pp-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            background: linear-gradient(90deg,
+                    #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+            animation-delay: -1s;
+        }
+
+        .pp-date {
+            font-size: 0.82rem;
+            color: var(--dim);
+        }
+
+        /* ── CONTENT ── */
+        .pp-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 56px 24px 100px;
+        }
+
+        /* tl;dr card */
+        .tldr-card {
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.07), rgba(56, 255, 18, 0.04));
+            border: 1px solid rgba(0, 247, 255, 0.22);
+            border-radius: 20px;
+            padding: 32px 36px;
+            margin-bottom: 56px;
+        }
+
+        .tldr-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+
+        .tldr-card p {
+            color: var(--muted);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .tldr-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .tldr-card li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .tldr-card li span.icon {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* sections */
+        .pp-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .pp-section:hover {
+            border-color: rgba(0, 247, 255, 0.2);
+        }
+
+        .pp-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(90deg,
+                    #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+        }
+
+        .pp-section:nth-child(2) h2 {
+            animation-delay: -1s;
+        }
+
+        .pp-section:nth-child(3) h2 {
+            animation-delay: -2s;
+        }
+
+        .pp-section:nth-child(4) h2 {
+            animation-delay: -3s;
+        }
+
+        .pp-section:nth-child(5) h2 {
+            animation-delay: -4s;
+        }
+
+        .pp-section p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        /* contact links */
+        .pp-section a {
+            color: var(--cyan);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 247, 255, 0.3);
+            transition: border-color 0.2s;
+        }
+
+        .pp-section a:hover {
+            border-color: var(--cyan);
+        }
+
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 15px 30px;
+            border-radius: 100px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--cyan), var(--green));
+            color: #000814;
+            box-shadow: 0 0 36px rgba(0, 247, 255, 0.28);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 56px rgba(0, 247, 255, 0.45);
+        }
+
+        /* ── FOOTER ── */
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 44px 0;
+        }
+
+        .foot-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .foot-copy {
+            font-size: 0.78rem;
+            color: var(--dim);
+            margin-top: 4px;
+        }
+
+        .foot-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .foot-links a {
+            color: var(--dim);
+            text-decoration: none;
+            font-size: 0.83rem;
+            transition: color 0.2s;
+        }
+
+        .foot-links a:hover {
+            color: var(--cyan);
+        }
+
+        .foot-social {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .foot-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.45);
+            transition: color 0.2s, background 0.2s;
+            text-decoration: none;
+        }
+
+        .foot-social a:hover {
+            color: var(--cyan);
+            background: rgba(0, 247, 255, 0.08);
+        }
+
+        .foot-social svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ── MODALS ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 8, 20, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .modal-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: lb-appear 0.35s cubic-bezier(.22, .68, 0, 1.2) both;
+        }
+
+        @keyframes lb-appear {
+            0% {
+                transform: scale(0.72);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #fb-form-container {
+            background: rgba(13, 19, 33, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 32px;
+            width: 100%;
+            max-width: 460px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        #fb-form-container h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        #fb-form-container p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .fb-textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .fb-textarea:focus {
+            outline: none;
+            border-color: var(--cyan);
+        }
+
+        .waitlist-input {
+            flex: 1;
+            min-width: 220px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 100px;
+            padding: 14px 22px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .waitlist-input::placeholder {
+            color: var(--dim);
+        }
+
+        .waitlist-input:focus {
+            border-color: var(--cyan);
+        }
+
+        .waitlist-msg {
+            font-size: 0.88rem;
+            min-height: 1.4em;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 0 18px;
+            }
+
+            .pp-hero {
+                padding: 56px 18px 40px;
+            }
+
+            .tldr-card {
+                padding: 24px 20px;
+            }
+
+            .pp-section {
+                padding: 22px 20px;
+            }
+
+            .foot-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .foot-inner>div:last-child {
+                align-items: center;
+            }
+
+            .foot-social {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="assets/kaid-logo.png" alt="KAID Logo" class="nav-logo-img">
+            <div>
+                <div>
+                    <span class="nav-rainbow">
+                        <span class="nav-kaid">KAID</span>
+                        <span class="nav-sep"> · </span>
+                        <span class="nav-sub">Kids AI Dojo</span>
+                    </span>
+                </div>
+                <div class="nav-powered">by TriVeer.AI</div>
+            </div>
+        </a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <!-- HERO -->
+    <div class="pp-hero">
+        <div class="pp-label">🔒 Legal</div>
+        <h1 class="pp-title">Privacy Policy</h1>
+        <p class="pp-date">Last Updated: February 18, 2026</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="pp-content">
+
+        <!-- tl;dr -->
+        <div class="tldr-card">
+            <h3>tl;dr for Parents</h3>
+            <p><strong style="color:var(--text)">Kids AI Dojo (KAID)</strong> is designed to be completely safe and
+                private.</p>
+            <ul>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> collect any personal
+                        information.</span></li>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> use any analytics or tracking.</span>
+                </li>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> show ads.</span></li>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> share any sensitive data with third
+                        parties.</span></li>
+            </ul>
+        </div>
+
+        <!-- Sections -->
+        <div class="pp-section">
+            <h2>1. Information Collection & COPPA Compliance</h2>
+            <p>We do not collect, store, or share any personal information from children or adults. No sensitive data
+                leaves the app. In compliance with the Children's Online Privacy Protection Act (COPPA), we do not
+                knowingly collect personal information from children under the age of 13.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>2. App Data & Data Deletion</h2>
+            <p>Any data used in the app are saved securely and solely on your device. Uninstalling the app will
+                instantly remove all saved data. Because no data is collected or transmitted to our servers, we have no
+                accounts to delete and no user data on file to fulfill deletion requests under GDPR, CCPA, or App Store
+                guidelines.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>3. AI &amp; Voice Features</h2>
+            <p>Your child's interactions within the app are never shared with or transmitted to any third party. All
+                voice recordings made using the Personal Voice feature stay entirely on your device and are never
+                uploaded anywhere.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>4. External Links</h2>
+            <p>The app contains links to this privacy policy and support pages in the Parents Area. These links are
+                protected by a Parental Gate to ensure children do not inadvertently access the web.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>5. Disclaimers & Limitation of Liability</h2>
+            <p><strong>Original & Fictional Content:</strong> All roleplay scenarios, characters, and storylines within
+                the Kids AI Dojo app are entirely fictional. Any resemblance to real persons,
+                living or dead, or actual real-world events is purely coincidental.</p>
+            <p style="margin-top:12px"><strong>Educational Purposes Only:</strong> The content provided in the app is
+                for general educational and entertainment purposes only. While our scenarios aim to guide children in
+                positive decision-making and soft skill development, the app does not provide professional behavioral,
+                psychological, or medical advice. Parents and guardians are solely responsible for guiding their child's
+                development and interpreting any lessons from the app.</p>
+            <p style="margin-top:12px"><strong>No Warranties:</strong> The App is provided "AS-IS" and "AS AVAILABLE,"
+                without warranty of any kind. We disclaim all warranties, whether express, implied, or statutory,
+                including but not limited to implied warranties of merchantability, fitness for a particular purpose,
+                and non-infringement.</p>
+            <p style="margin-top:12px"><strong>Limitation of Liability:</strong> To the maximum extent permitted by
+                applicable law, TriVeer.AI and the creators of KAID shall not be liable for any indirect, incidental,
+                special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred
+                directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from
+                your access to or use of or inability to access or use the application.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>6. Contact Us</h2>
+            <p>For inquiries, or to contact TriVeer.AI as the operator of this application regarding privacy practices,
+                please email us at <a href="mailto:kaid@triveer.ai">kaid@triveer.ai</a></p>
+            <p style="margin-top:12px">To report technical issues, <a href="#issue">raise an issue</a>.</p>
+            <p style="margin-top:12px">Have an idea or suggestion? <a href="#feedback">Submit a feature request</a>.</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="foot-inner">
+                <div>
+                    <div style="display:flex;align-items:center;gap:14px">
+                        <img src="assets/kaid-logo.png" alt="KAID" style="height:40px;width:40px;object-fit:contain">
+                        <div style="width:1px;height:36px;background:rgba(255,255,255,0.1)"></div>
+                        <img src="assets/triveer-logo.png" alt="TriVeer.AI"
+                            style="height:36px;width:36px;object-fit:contain">
+                        <div>
+                            <div>
+                                <span class="nav-rainbow">
+                                    <span class="nav-kaid">KAID</span>
+                                    <span class="nav-sep"> · </span>
+                                    <span class="nav-sub">Kids AI Dojo</span>
+                                </span>
+                            </div>
+                            <div class="foot-copy">© 2026 TriVeer.AI · All rights reserved</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:14px">
+                    <ul class="foot-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="mailto:kaid@triveer.ai">Contact</a></li>
+                        <li><a href="#feedback">Feature Request / Feedback</a></li>
+                        <li><a href="#issue">Raise Issue</a></li>
+                    </ul>
+                    <div class="foot-social">
+                        <!-- X / Twitter -->
+                        <a href="https://x.com/KAIDbyTriVeer" target="_blank" rel="noopener"
+                            aria-label="Follow KAID on X">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.014 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <!-- Threads -->
+                        <a href="https://www.threads.com/@kaidbytriveer" target="_blank" rel="noopener"
+                            aria-label="Follow KAID on Threads">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.513 5.466l-2.476.67c-1.119-4.038-3.81-6.096-8.01-6.124-2.664.019-4.71.828-6.082 2.405-1.345 1.547-2.026 3.787-2.026 6.485 0 2.699.681 4.939 2.026 6.486 1.371 1.577 3.417 2.386 6.082 2.405 1.496-.009 2.791-.322 3.847-.93 1.13-.647 1.959-1.604 2.462-2.838.425-1.042.622-2.329.594-3.812H12.12v-2.347h8.547c.026.362.028.71.013 1.041a11.1 11.1 0 0 1-.021.528c-.164 3.253-1.166 5.773-2.981 7.49-1.64 1.546-3.84 2.333-6.492 2.341Z" />
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=61588521190494" target="_blank" rel="noopener"
+                            aria-label="Follow KAID on Facebook">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/kaidbytriveer/" target="_blank" rel="noopener"
+                            aria-label="Follow KAID on Instagram">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======= FEEDBACK MODAL ======= -->
+    <div id="fb-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Feedback Form">
+        <div class="modal-backdrop"></div>
+        <div class="modal-inner">
+            <div id="fb-form-container">
+                <h3>Feedback & Ideas</h3>
+                <p>Have a great idea for a new skill category, or spotted something that could be better? Let us know!
+                </p>
+                <form id="fb-form" novalidate>
+                    <textarea id="fb-text" class="fb-textarea" placeholder="Tell us your idea..." required></textarea>
+                    <input type="email" id="fb-email" class="waitlist-input"
+                        placeholder="Your email so we can update you" autocomplete="email" required
+                        style="margin-bottom:24px; color: #fff; width: 100%; box-sizing: border-box;" />
+                    <div style="display: flex; gap: 12px; justify-content: center; align-items: center; width: 100%;">
+                        <button type="submit" id="fb-btn" class="btn btn-primary"
+                            style="flex: 1; padding: 14px 20px; font-size: 1rem;">Send Feedback/Idea</button>
+                        <button type="button" id="fb-explicit-close" class="btn"
+                            style="flex: 1; padding: 14px 20px; font-size: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff;">Close</button>
+                    </div>
+                    <p id="fb-msg" class="waitlist-msg" aria-live="polite" style="margin-bottom:0; text-align:center;">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= ISSUE MODAL ======= -->
+    <div id="issue-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Submit Issue">
+        <div class="modal-backdrop"></div>
+        <div class="modal-inner">
+            <div id="fb-form-container">
+                <h3>Raise an Issue</h3>
+                <p>Did something go wrong or look broken? Let us know so we can fix it.</p>
+                <form id="issue-form" novalidate>
+                    <textarea id="issue-text" class="fb-textarea" placeholder="How to reproduce the issue..."
+                        required></textarea>
+                    <input type="email" id="issue-email" class="waitlist-input"
+                        placeholder="Your email (so we can follow up with you)" autocomplete="email" required
+                        style="margin-bottom:24px; color: #fff; width: 100%; box-sizing: border-box;" />
+                    <div style="display: flex; gap: 12px; justify-content: center; align-items: center; width: 100%;">
+                        <button type="submit" id="issue-btn" class="btn btn-primary"
+                            style="flex: 1; padding: 14px 20px; font-size: 1rem;">Submit Issue</button>
+                        <button type="button" id="issue-explicit-close" class="btn"
+                            style="flex: 1; padding: 14px 20px; font-size: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff;">Close</button>
+                    </div>
+                    <p id="issue-msg" class="waitlist-msg" aria-live="polite"
+                        style="margin-bottom:0; text-align:center;">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const WORKER_URL = 'https://api.triveer.ai';
+
+            /* ── Feedback Modal Logic ── */
+            const fbModal = document.getElementById('fb-modal');
+            const fbClose = document.getElementById('fb-explicit-close');
+            const fbForm = document.getElementById('fb-form');
+            const fbMsg = document.getElementById('fb-msg');
+            const fbBtn = document.getElementById('fb-btn');
+
+            document.querySelectorAll('a[href="#feedback"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fbModal.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function closeFbModal() {
+                fbModal.classList.remove('open');
+                document.body.style.overflow = '';
+                fbForm.reset();
+                fbMsg.textContent = '';
+                fbBtn.disabled = false;
+                fbBtn.textContent = 'Send Feedback';
+            }
+
+            fbClose.addEventListener('click', closeFbModal);
+            fbModal.addEventListener('click', function (e) {
+                if (e.target === fbModal || e.target.classList.contains('modal-backdrop') || e.target.classList.contains('modal-inner')) {
+                    closeFbModal();
+                }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && fbModal.classList.contains('open')) closeFbModal();
+            });
+
+            fbForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const email = document.getElementById('fb-email').value.trim();
+                const idea = document.getElementById('fb-text').value.trim();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    fbMsg.innerHTML = 'Please enter a valid email address.';
+                    fbMsg.style.color = '#f87171';
+                    return;
+                }
+
+                if (idea.length < 10) {
+                    fbMsg.innerHTML = 'Please elaborate your idea (at least 10 characters).';
+                    fbMsg.style.color = '#f87171';
+                    return;
+                }
+
+                fbMsg.textContent = '';
+                fbBtn.disabled = true;
+                fbBtn.textContent = 'Sending…';
+
+                try {
+                    const res = await fetch(WORKER_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, content: idea, type: 'feedback' }),
+                    });
+                    const data = await res.json();
+
+                    if (data.success) {
+                        fbMsg.innerHTML = "Thanks for your feedback! 💡<br>We read every single idea submitted.";
+                        fbMsg.style.color = '#4ade80';
+                        fbForm.reset();
+                        fbBtn.textContent = '✓ Sent';
+                    } else {
+                        throw new Error(data.error || 'Unknown error');
+                    }
+                } catch {
+                    fbMsg.textContent = 'Something went wrong. Please try again.';
+                    fbMsg.style.color = '#f87171';
+                    fbBtn.disabled = false;
+                    fbBtn.textContent = 'Send Feedback';
+                }
+            });
+
+            /* ── Issue Modal Logic ── */
+            const issueModal = document.getElementById('issue-modal');
+            const issueClose = document.getElementById('issue-explicit-close');
+            const issueForm = document.getElementById('issue-form');
+            const issueMsg = document.getElementById('issue-msg');
+            const issueBtn = document.getElementById('issue-btn');
+
+            document.querySelectorAll('a[href="#issue"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    issueModal.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function closeIssueModal() {
+                issueModal.classList.remove('open');
+                document.body.style.overflow = '';
+                issueForm.reset();
+                issueMsg.textContent = '';
+                issueBtn.disabled = false;
+                issueBtn.textContent = 'Submit Issue';
+            }
+
+            issueClose.addEventListener('click', closeIssueModal);
+            issueModal.addEventListener('click', function (e) {
+                if (e.target === issueModal || e.target.classList.contains('modal-backdrop') || e.target.classList.contains('modal-inner')) {
+                    closeIssueModal();
+                }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && issueModal.classList.contains('open')) closeIssueModal();
+            });
+
+            issueForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const email = document.getElementById('issue-email').value.trim();
+                const issue = document.getElementById('issue-text').value.trim();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    issueMsg.innerHTML = 'Please enter a valid email address.';
+                    issueMsg.style.color = '#f87171';
+                    return;
+                }
+
+                if (issue.length < 10) {
+                    issueMsg.innerHTML = 'Please describe the issue in at least 10 characters.';
+                    issueMsg.style.color = '#f87171';
+                    return;
+                }
+
+                issueMsg.textContent = '';
+                issueBtn.disabled = true;
+                issueBtn.textContent = 'Sending…';
+
+                try {
+                    const res = await fetch(WORKER_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, content: issue, type: 'issue' }),
+                    });
+                    const data = await res.json();
+
+                    if (data.success) {
+                        issueMsg.innerHTML = "Thanks for letting us know! 🛠️<br>We will look into this right away.";
+                        issueMsg.style.color = '#4ade80';
+                        issueForm.reset();
+                        issueBtn.textContent = '✓ Submitted';
+                    } else {
+                        throw new Error(data.error || 'Unknown error');
+                    }
+                } catch {
+                    issueMsg.textContent = 'Something went wrong. Please try again or email us directly.';
+                    issueMsg.style.color = '#f87171';
+                    issueBtn.disabled = false;
+                    issueBtn.textContent = 'Submit Issue';
+                }
+            });
+
+            // Handle direct links to forms via hash
+            if (window.location.hash === '#feedback') {
+                fbModal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            } else if (window.location.hash === '#issue') {
+                issueModal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
