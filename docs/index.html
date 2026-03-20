@@ -2025,6 +2025,265 @@
             cursor: pointer;
         }
 
+        /* ===== CELEBRATION BANNER ===== */
+        #celebration {
+            padding: 80px 0 96px;
+            background: linear-gradient(180deg,
+                rgba(255, 64, 166, 0.04) 0%,
+                rgba(179, 77, 255, 0.06) 30%,
+                rgba(0, 247, 255, 0.04) 70%,
+                transparent 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #celebration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--magenta), var(--cyan), var(--green), transparent);
+            opacity: 0.5;
+        }
+
+        #celebration::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--cyan), var(--magenta), transparent);
+            opacity: 0.3;
+        }
+
+        .celeb-headline {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .celeb-sub {
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 48px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .celeb-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .celeb-video-wrap {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 64, 166, 0.35);
+            box-shadow:
+                0 0 60px rgba(255, 64, 166, 0.15),
+                0 0 120px rgba(179, 77, 255, 0.08),
+                0 20px 60px rgba(0, 0, 0, 0.4);
+            aspect-ratio: 9 / 16;
+            max-height: 520px;
+            margin: 0 auto;
+            animation: celeb-glow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes celeb-glow {
+            0% {
+                border-color: rgba(255, 64, 166, 0.35);
+                box-shadow:
+                    0 0 60px rgba(255, 64, 166, 0.15),
+                    0 0 120px rgba(179, 77, 255, 0.08),
+                    0 20px 60px rgba(0, 0, 0, 0.4);
+            }
+            50% {
+                border-color: rgba(0, 247, 255, 0.4);
+                box-shadow:
+                    0 0 60px rgba(0, 247, 255, 0.2),
+                    0 0 120px rgba(56, 255, 18, 0.08),
+                    0 20px 60px rgba(0, 0, 0, 0.4);
+            }
+            100% {
+                border-color: rgba(179, 77, 255, 0.4);
+                box-shadow:
+                    0 0 60px rgba(179, 77, 255, 0.15),
+                    0 0 120px rgba(255, 64, 166, 0.1),
+                    0 20px 60px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        .celeb-video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .celeb-right {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .celeb-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .celeb-stat {
+            flex: 1;
+            min-width: 140px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 28px 22px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .celeb-stat:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 247, 255, 0.3);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+        }
+
+        .celeb-stat-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .celeb-stat-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(90deg,
+                    #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+            line-height: 1.1;
+        }
+
+        .celeb-stat-label {
+            font-size: 0.82rem;
+            color: var(--dim);
+            font-weight: 600;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .celeb-thankyou {
+            background: linear-gradient(135deg, rgba(255, 64, 166, 0.08), rgba(179, 77, 255, 0.08), rgba(0, 247, 255, 0.06));
+            border: 1px solid rgba(255, 64, 166, 0.25);
+            border-radius: 20px;
+            padding: 28px 28px;
+            position: relative;
+            animation: thankyou-border 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes thankyou-border {
+            0% { border-color: rgba(255, 64, 166, 0.3); }
+            33% { border-color: rgba(179, 77, 255, 0.3); }
+            66% { border-color: rgba(0, 247, 255, 0.3); }
+            100% { border-color: rgba(56, 255, 18, 0.3); }
+        }
+
+        .celeb-thankyou-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(90deg, var(--magenta), var(--purple), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .celeb-thankyou p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.72;
+        }
+
+        .celeb-thankyou p strong {
+            color: var(--cyan);
+            -webkit-text-fill-color: var(--cyan);
+        }
+
+        .celeb-badge-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .celeb-mini-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 100px;
+            padding: 6px 14px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        /* Floating celebration emojis */
+        .celeb-float {
+            position: absolute;
+            font-size: 1.6rem;
+            pointer-events: none;
+            animation: celeb-drift 6s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes celeb-drift {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+            25% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+            50% { transform: translateY(-8px) rotate(-5deg); opacity: 0.9; }
+            75% { transform: translateY(-25px) rotate(8deg); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .celeb-layout {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .celeb-video-wrap {
+                max-height: 440px;
+                max-width: 280px;
+            }
+
+            .celeb-stats {
+                justify-content: center;
+            }
+
+            .celeb-stat {
+                min-width: 120px;
+            }
+        }
+
         .pv-slide .pv-frame::after {
             content: '🔍';
             position: absolute;
@@ -2216,6 +2475,71 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= 🎉 CELEBRATION BANNER ======= -->
+    <section id="celebration">
+        <!-- Floating celebration emojis -->
+        <span class="celeb-float" style="top:8%;left:5%;animation-delay:0s">🎉</span>
+        <span class="celeb-float" style="top:15%;right:8%;animation-delay:1s">❤️</span>
+        <span class="celeb-float" style="top:55%;left:3%;animation-delay:2s">🔥</span>
+        <span class="celeb-float" style="bottom:20%;right:5%;animation-delay:0.5s">⭐</span>
+        <span class="celeb-float" style="bottom:10%;left:8%;animation-delay:1.5s">🚀</span>
+        <span class="celeb-float" style="top:35%;right:3%;animation-delay:2.5s">💜</span>
+
+        <div class="container">
+            <div class="label" style="text-align:center;color:var(--magenta)">🏆 Week One Milestone</div>
+            <h2 class="celeb-headline">
+                <span class="grad-cyan">The Love Is Real!</span> 🎉
+            </h2>
+            <p class="celeb-sub">In just our first week, the KAID community has blown us away. Here's proof — straight from social media!</p>
+
+            <div class="celeb-layout">
+                <!-- Video -->
+                <div class="celeb-video-wrap">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/videos/likes.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- Stats + Thank You -->
+                <div class="celeb-right">
+                    <div class="celeb-stats">
+                        <div class="celeb-stat reveal">
+                            <span class="celeb-stat-icon">❤️</span>
+                            <span class="celeb-stat-num">10,000+</span>
+                            <span class="celeb-stat-label">Likes</span>
+                        </div>
+                        <div class="celeb-stat reveal">
+                            <span class="celeb-stat-icon">👀</span>
+                            <span class="celeb-stat-num">50,000+</span>
+                            <span class="celeb-stat-label">Views</span>
+                        </div>
+                    </div>
+
+                    <div class="celeb-thankyou">
+                        <div class="celeb-thankyou-title">🙏 You Made This Happen!</div>
+                        <p>
+                            We're absolutely <strong>blown away</strong> by the incredible response in just our first week!
+                            Every single like, share, and download means the world to us. You're not just using an app — you're
+                            part of a <strong>movement</strong> to raise kids who think critically, lead with empathy, and thrive
+                            in the AI era. From the bottom of our hearts — <strong>THANK YOU</strong> for believing in KAID and
+                            loving it as much as we love building it for your kids! 💜🥋
+                        </p>
+                        <div class="celeb-badge-row">
+                            <span class="celeb-mini-badge">🌍 Going Global</span>
+                            <span class="celeb-mini-badge">💜 Community Driven</span>
+                            <span class="celeb-mini-badge">🔥 Week 1 of Many</span>
+                        </div>
+                    </div>
+
+                    <a href="https://apps.apple.com/us/app/kaid-kids-ai-dojo/id6759269799" class="btn btn-primary"
+                        style="align-self:flex-start;font-size:1rem;padding:16px 32px;">
+                        Join the Movement — Download Free ⬇
+                    </a>
                 </div>
             </div>
         </div>
