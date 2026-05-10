@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's Your Mind Type? — Free 3-Minute Critical Thinking Assessment | ThinQr</title>
     <meta name="description"
-        content="Discover your 4-letter critical thinking style in 3 minutes. Like MBTI, but for how you reason. Free, no signup, instant results.">
+        content="Discover your 4-letter cognitive archetype in 3 minutes. Mind Type maps how you reason — logic, biases, evidence, decisions — not how you interact. Free, no signup, instant results.">
     <link rel="icon" type="image/png" href="../assets/thinqr-logo-200.png">
     <link rel="apple-touch-icon" href="../assets/thinqr-logo-200.png">
     <meta name="theme-color" content="#0D1117">
@@ -520,9 +520,14 @@
     <main>
         <!-- Intro -->
         <section id="intro" class="intro">
-            <h1>What's Your <span class="grad">Mind Type</span>?</h1>
-            <p>Myers-Briggs revealed how you <em>interact</em> with the world. ThinQr reveals how you <em>think
-                    through</em> it. Discover your 4-letter critical thinking style — like MBTI, but for reasoning.</p>
+            <h1>What's Your <span class="grad">ThinQr Mind Type</span>?</h1>
+            <p>Personality typologies like MBTI map how you <em>interact</em> with the world. <strong>Mind Type maps how you <em>reason through</em> it</strong> — logic, bias awareness, evidence handling, decisions. Your own 4-letter cognitive archetype, mapped to 16 reasoning styles, in 3 minutes.</p>
+            <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:18px 0 22px;padding:0;text-align:left;font-size:0.85rem;color:rgba(255,255,255,0.85);line-height:1.5;">
+                <li style="background:rgba(108,92,231,0.10);border:1px solid rgba(108,92,231,0.25);border-radius:10px;padding:10px 12px;"><strong style="color:#A29BFE;">Reasoning, not personality.</strong> Built for the AI era.</li>
+                <li style="background:rgba(108,92,231,0.10);border:1px solid rgba(108,92,231,0.25);border-radius:10px;padding:10px 12px;"><strong style="color:#A29BFE;">Evolves with you.</strong> Retake monthly &mdash; type can shift as you train.</li>
+                <li style="background:rgba(108,92,231,0.10);border:1px solid rgba(108,92,231,0.25);border-radius:10px;padding:10px 12px;"><strong style="color:#A29BFE;">Actionable.</strong> Each result includes a targeted growth plan.</li>
+                <li style="background:rgba(108,92,231,0.10);border:1px solid rgba(108,92,231,0.25);border-radius:10px;padding:10px 12px;"><strong style="color:#A29BFE;">Free &amp; private.</strong> No signup, no data sold.</li>
+            </ul>
             <div class="meta">
                 <span>⏱ 3 minutes</span>
                 <span>📋 12 scenarios</span>
@@ -556,7 +561,7 @@
                 <span class="r-tag">Your Mind Type</span>
                 <div class="r-code" id="rCode">ASLB</div>
                 <div class="r-name" id="rName">The Systems Architect</div>
-                <div class="r-match" id="rMatch">Like Elon Musk · Marie Curie · Ada Lovelace</div>
+                <div class="r-match" id="rMatch">Systems thinkers · Structural minds · Pattern-spotting builders</div>
 
                 <div class="axes" id="rAxes"></div>
 
@@ -630,7 +635,7 @@
             </div>
         </section>
         <footer style="max-width: 720px; margin: 40px auto 24px; padding: 0 20px; font-size: 0.72rem; color: rgba(255,255,255,0.55); line-height: 1.55; text-align: center;">
-            <p>MBTI&reg; and Myers-Briggs&reg; are registered trademarks of The Myers-Briggs Company. ThinQr is not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company. References on this page are comparative only. The Mind Type framework is an independent cognitive-style model developed by TriVeer AI.</p>
+            <p>MBTI&reg; and Myers-Briggs&reg; are registered trademarks of The Myers-Briggs Company. ThinQr is not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company. References on this page are comparative only. The ThinQr Mind Type framework is an independent cognitive-style model developed by TriVeer AI.</p>
             <p style="margin-top: 12px;">&copy; 2026 TriVeer AI &middot; <a href="../index.html" style="color: inherit;">ThinQr</a> &middot; <a href="../../privacy.html" style="color: inherit;">Privacy</a> &middot; <a href="../../terms.html" style="color: inherit;">Terms</a></p>
         </footer>
     </main>
@@ -769,22 +774,22 @@
         ];
 
         const ARCHETYPES = {
-            ASLB: { name: "The Systems Architect", match: "Like Elon Musk · Marie Curie · Ada Lovelace", desc: "You build mental models of everything and spot structural flaws others miss. Your edge: seeing how parts fit into a whole.", strengths: "Systems thinking, structural rigor, pattern recognition.", blind: "May over-engineer; can underweight emotion and context." },
-            ASLD: { name: "The First-Principles Reasoner", match: "Like Richard Feynman · Charlie Munger", desc: "You won't accept 'because that's how it works' — you deconstruct to fundamentals before rebuilding.", strengths: "Deep analysis, rigorous logic, attention to detail.", blind: "Can get lost in detail; slow to ship under uncertainty." },
-            ASEB: { name: "The Devil's Advocate", match: "Like Socrates · Christopher Hitchens", desc: "You question everything, especially popular opinion, and find the weakness in any argument — but lead with care.", strengths: "Sharp skepticism, ethical instinct, fairness.", blind: "Can come across as combative; may slow group consensus." },
-            ASED: { name: "The Investigator", match: "Like Sherlock Holmes · Woodward & Bernstein", desc: "Methodical, evidence-driven, you catch the details everyone else glosses over.", strengths: "Forensic thinking, evidence chains, source evaluation.", blind: "Can be slow; may resist gut calls when needed." },
-            AOLB: { name: "The Strategist", match: "Like Sun Tzu · Daniel Kahneman", desc: "You see three moves ahead and optimize for long-term outcomes over short-term wins.", strengths: "Long-horizon thinking, scenario planning, pragmatism.", blind: "Can overlook today's tactical wins; may seem detached." },
-            AOLD: { name: "The Optimizer", match: "Like Marie Curie · W. Edwards Deming", desc: "Relentlessly improving processes, data-driven to the core, you compound small gains into big ones.", strengths: "Data fluency, iteration, process discipline.", blind: "May over-optimize on metrics that don't matter most." },
-            AOEB: { name: "The Bridge Builder", match: "Like Nelson Mandela · Satya Nadella", desc: "Analytical yet empathetic — you find solutions that satisfy logic AND people.", strengths: "Synthesis, diplomacy, holistic thinking.", blind: "Can avoid hard tradeoffs in pursuit of consensus." },
-            AOED: { name: "The Craftsperson", match: "Like Ada Lovelace · Linus Torvalds", desc: "Meticulous, methodical, you build things that actually work and care deeply about how they're made.", strengths: "Deep expertise, quality bar, careful execution.", blind: "Can resist shipping until perfect; slow to delegate." },
-            NSLB: { name: "The Pattern Spotter", match: "Like Malcolm Gladwell · Nate Silver", desc: "You see connections others miss and trust intuition backed by skepticism.", strengths: "Cross-domain thinking, narrative pattern-matching.", blind: "Patterns can be illusory — may overfit small samples." },
-            NSLD: { name: "The Myth Buster", match: "Like Carl Sagan · Tim Urban", desc: "Intuitive radar for BS, then verifies with evidence — your superpower is detecting plausible-but-wrong.", strengths: "Calibrated skepticism, source-checking, clear writing.", blind: "Can dismiss novel ideas too quickly." },
-            NSEB: { name: "The Questioner", match: "Like Oprah Winfrey · Brené Brown", desc: "You ask the questions nobody else thinks to ask. People-centered, but never naive.", strengths: "Active listening, empathic inquiry, frame-finding.", blind: "Can prioritize harmony over the harder truth." },
-            NSED: { name: "The Truth Seeker", match: "Like Christiane Amanpour · Ronan Farrow", desc: "You dig until the real story surfaces, driven by fairness and a sharp eye for inconsistency.", strengths: "Tenacious research, ethics, attention to nuance.", blind: "Can get tunnel vision on a single thread." },
-            NOLB: { name: "The Visionary", match: "Like Steve Jobs · Buckminster Fuller", desc: "You see the future in patterns and connect dots across domains others see as unrelated.", strengths: "Bold synthesis, originality, conviction.", blind: "Can underweight logistics; impatient with detail." },
-            NOLD: { name: "The Tinkerer", match: "Like Leonardo da Vinci · Steve Wozniak", desc: "You experiment, iterate, and learn by doing — hands-on intuitive problem solver.", strengths: "Prototyping, curiosity, learning by feedback loop.", blind: "Can wander; may struggle to finish before starting next." },
-            NOEB: { name: "The Empathizer", match: "Like Brené Brown · Fred Rogers", desc: "You lead with understanding, read the room, and think about impact first.", strengths: "Emotional intelligence, motivational clarity, framing.", blind: "Can avoid hard feedback; may delay tough calls." },
-            NOED: { name: "The Storyteller", match: "Like Maya Angelou · David Foster Wallace", desc: "You understand through narrative and make complex ideas relatable and human.", strengths: "Communication, framing, audience awareness.", blind: "Can prioritize a good story over a precise one." }
+            ASLB: { name: "The Systems Architect", match: "Systems thinkers · Structural minds · Pattern-spotting builders", desc: "You build mental models of everything and spot structural flaws others miss. Your edge: seeing how parts fit into a whole.", strengths: "Systems thinking, structural rigor, pattern recognition.", blind: "May over-engineer; can underweight emotion and context." },
+            ASLD: { name: "The First-Principles Reasoner", match: "Foundation-builders · Rigorous logicians · Detail-tracers", desc: "You won't accept 'because that's how it works' — you deconstruct to fundamentals before rebuilding.", strengths: "Deep analysis, rigorous logic, attention to detail.", blind: "Can get lost in detail; slow to ship under uncertainty." },
+            ASEB: { name: "The Devil's Advocate", match: "Constructive skeptics · Ethics-minded challengers · Argument-strengtheners", desc: "You question everything, especially popular opinion, and find the weakness in any argument — but lead with care.", strengths: "Sharp skepticism, ethical instinct, fairness.", blind: "Can come across as combative; may slow group consensus." },
+            ASED: { name: "The Investigator", match: "Forensic thinkers · Evidence-chasers · Detail-catchers", desc: "Methodical, evidence-driven, you catch the details everyone else glosses over.", strengths: "Forensic thinking, evidence chains, source evaluation.", blind: "Can be slow; may resist gut calls when needed." },
+            AOLB: { name: "The Strategist", match: "Long-horizon planners · Scenario thinkers · Pragmatic optimizers", desc: "You see three moves ahead and optimize for long-term outcomes over short-term wins.", strengths: "Long-horizon thinking, scenario planning, pragmatism.", blind: "Can overlook today's tactical wins; may seem detached." },
+            AOLD: { name: "The Optimizer", match: "Data-driven iterators · Process-disciplined builders · Compounders", desc: "Relentlessly improving processes, data-driven to the core, you compound small gains into big ones.", strengths: "Data fluency, iteration, process discipline.", blind: "May over-optimize on metrics that don't matter most." },
+            AOEB: { name: "The Bridge Builder", match: "Synthesis-minded leaders · Diplomatic problem-solvers · Whole-system thinkers", desc: "Analytical yet empathetic — you find solutions that satisfy logic AND people.", strengths: "Synthesis, diplomacy, holistic thinking.", blind: "Can avoid hard tradeoffs in pursuit of consensus." },
+            AOED: { name: "The Craftsperson", match: "Deep specialists · Quality-bar setters · Careful executors", desc: "Meticulous, methodical, you build things that actually work and care deeply about how they're made.", strengths: "Deep expertise, quality bar, careful execution.", blind: "Can resist shipping until perfect; slow to delegate." },
+            NSLB: { name: "The Pattern Spotter", match: "Cross-domain connectors · Narrative-pattern readers · Skeptical intuitives", desc: "You see connections others miss and trust intuition backed by skepticism.", strengths: "Cross-domain thinking, narrative pattern-matching.", blind: "Patterns can be illusory — may overfit small samples." },
+            NSLD: { name: "The Myth Buster", match: "Calibrated skeptics · Source-checkers · Plausible-but-wrong detectors", desc: "Intuitive radar for BS, then verifies with evidence — your superpower is detecting plausible-but-wrong.", strengths: "Calibrated skepticism, source-checking, clear writing.", blind: "Can dismiss novel ideas too quickly." },
+            NSEB: { name: "The Questioner", match: "Active listeners · Frame-finders · People-curious inquirers", desc: "You ask the questions nobody else thinks to ask. People-centered, but never naive.", strengths: "Active listening, empathic inquiry, frame-finding.", blind: "Can prioritize harmony over the harder truth." },
+            NSED: { name: "The Truth Seeker", match: "Tenacious researchers · Ethics-driven diggers · Inconsistency-spotters", desc: "You dig until the real story surfaces, driven by fairness and a sharp eye for inconsistency.", strengths: "Tenacious research, ethics, attention to nuance.", blind: "Can get tunnel vision on a single thread." },
+            NOLB: { name: "The Visionary", match: "Bold synthesizers · Future-pattern readers · Cross-domain originals", desc: "You see the future in patterns and connect dots across domains others see as unrelated.", strengths: "Bold synthesis, originality, conviction.", blind: "Can underweight logistics; impatient with detail." },
+            NOLD: { name: "The Tinkerer", match: "Hands-on experimenters · Iterative learners · Curious prototypers", desc: "You experiment, iterate, and learn by doing — hands-on intuitive problem solver.", strengths: "Prototyping, curiosity, learning by feedback loop.", blind: "Can wander; may struggle to finish before starting next." },
+            NOEB: { name: "The Empathizer", match: "Emotionally-intelligent leaders · Room-readers · Impact-first framers", desc: "You lead with understanding, read the room, and think about impact first.", strengths: "Emotional intelligence, motivational clarity, framing.", blind: "Can avoid hard feedback; may delay tough calls." },
+            NOED: { name: "The Storyteller", match: "Narrative thinkers · Audience-aware communicators · Idea-humanizers", desc: "You understand through narrative and make complex ideas relatable and human.", strengths: "Communication, framing, audience awareness.", blind: "Can prioritize a good story over a precise one." }
         };
 
         const SCORE_LABELS = [

@@ -72,8 +72,8 @@
             },
             {
               "@type": "Question",
-              "name": "What is the Mind Type Assessment?",
-              "acceptedAnswer": { "@type": "Answer", "text": "A 24-question scenario-based assessment that produces a 4-letter thinking style (like MBTI but for reasoning) plus a 0–100 ThinQr Score across 8 cognitive domains. You get a shareable result card and can retake it monthly." }
+              "name": "What is the ThinQr Mind Type Assessment?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A 24-question scenario-based assessment that produces a 4-letter thinking style mapped to 16 cognitive archetypes, plus a 0–100 ThinQr Score across 8 reasoning domains. Unlike personality typologies that label how you interact, Mind Type measures how you reason — logic, bias awareness, evidence handling, and decision quality — and evolves as you train. Retake monthly to track growth." }
             },
             {
               "@type": "Question",
@@ -802,6 +802,16 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             flex-shrink: 0;
             cursor: pointer;
+            -webkit-user-drag: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .marquee-wrapper *,
+        .showcase-marquee-wrapper * {
+            -webkit-user-drag: none;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .showcase-img:hover {
@@ -2808,9 +2818,9 @@
                 <div class="why-card">
                     <div class="why-icon">🧠</div>
                     <h4>Discover WHO You Are</h4>
-                    <p>Take the 5-minute Mind Type assessment to discover yourself: your 4-letter thinking style (like
-                        MBTI for reasoning), your cognitive strengths, your blind spots, and a personalized growth plan
-                        to close the gaps and level up where it matters most.</p>
+                    <p>Take the 5-minute Mind Type assessment to map how you reason: your 4-letter cognitive
+                        archetype, your reasoning strengths, your blind spots, and a personalized growth plan to
+                        close the gaps and level up where it matters most.</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">👥</div>
@@ -2858,9 +2868,9 @@
                 <div class="why-card">
                     <div class="why-icon">🧠</div>
                     <h4>Discover WHO You Are</h4>
-                    <p>Take the 5-minute Mind Type assessment to discover yourself: your 4-letter thinking style (like
-                        MBTI for reasoning), your cognitive strengths, your blind spots, and a personalized growth plan
-                        to close the gaps and level up where it matters most.</p>
+                    <p>Take the 5-minute Mind Type assessment to map how you reason: your 4-letter cognitive
+                        archetype, your reasoning strengths, your blind spots, and a personalized growth plan to
+                        close the gaps and level up where it matters most.</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">👥</div>
@@ -3192,12 +3202,9 @@
     <!-- ======= MIND TYPE / WHO ======= -->
     <section id="mindtype">
         <div class="container text-center">
-            <span class="label reveal">WHO — Mind Type Assessment</span>
+            <span class="label reveal">WHO — ThinQr Mind Type</span>
             <h2 class="section-title reveal">Discover <span class="grad-purple">WHO You Are</span> as a Thinker</h2>
-            <p class="section-sub reveal">MBTI revealed how you <em>interact</em> with the world — taken by 2M people a
-                year and used by 89 of the Fortune 100. ThinQr's WHO assessment reveals how you <em>think through</em>
-                it. Get a 4-letter Mind Type, a 0–100 ThinQr Score, and a personalized growth plan that points to the
-                exact trails to level up your weakest skills.</p>
+            <p class="section-sub reveal">Personality typologies like MBTI map how you <em>interact</em> with the world. <strong>Mind Type maps how you <em>reason through</em> it.</strong> A 4-letter cognitive archetype across our own 4 axes (Approach &middot; Stance &middot; Lens &middot; Scope), a 0&ndash;100 ThinQr Score across 8 reasoning domains (Logic, Biases, Evidence, Arguments, Decisions, Creativity, Problem-Solving, Meta-Cognition), and a personalized growth plan that routes you to the exact trails to level up your weakest skills.</p>
 
             <!-- Try the web preview CTA -->
             <div class="reveal" style="margin-bottom: 36px;">
@@ -3341,7 +3348,7 @@
                 <span class="mt-sample-tag">Sample Result</span>
                 <div class="mt-sample-code">ASLB</div>
                 <div class="mt-sample-name">The Systems Architect</div>
-                <div class="mt-sample-match">Like Elon Musk · Marie Curie · Ada Lovelace</div>
+                <div class="mt-sample-match">Systems thinkers · Structural minds · Pattern-spotting builders</div>
 
                 <div class="mt-axes">
                     <div class="mt-axis-row"><span class="mt-axis-name">Analytical</span>
@@ -3626,20 +3633,8 @@
                     <div class="showcase-meta"><span class="showcase-num">05</span><span class="showcase-title">Progress</span></div>
                 </div>
                 <div class="showcase-item">
-                    <img src="assets/screenshots/6.png" alt="Profile" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">06</span><span class="showcase-title">Profile</span></div>
-                </div>
-                <div class="showcase-item">
-                    <img src="assets/screenshots/8.png" alt="How ThinQr Works" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">07</span><span class="showcase-title">How ThinQr Works</span></div>
-                </div>
-                <div class="showcase-item">
-                    <img src="assets/screenshots/9.png" alt="How ThinQr Works" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">08</span><span class="showcase-title">How ThinQr Works</span></div>
-                </div>
-                <div class="showcase-item">
                     <img src="assets/screenshots/11.png" alt="Cognitive Toolkit" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">09</span><span class="showcase-title">Cognitive Toolkit</span></div>
+                    <div class="showcase-meta"><span class="showcase-num">06</span><span class="showcase-title">Cognitive Toolkit</span></div>
                 </div>
                 <!-- Duplicate Set for Seamless Loop -->
                 <div class="showcase-item">
@@ -3663,20 +3658,8 @@
                     <div class="showcase-meta"><span class="showcase-num">05</span><span class="showcase-title">Progress</span></div>
                 </div>
                 <div class="showcase-item">
-                    <img src="assets/screenshots/6.png" alt="Profile" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">06</span><span class="showcase-title">Profile</span></div>
-                </div>
-                <div class="showcase-item">
-                    <img src="assets/screenshots/8.png" alt="How ThinQr Works" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">07</span><span class="showcase-title">How ThinQr Works</span></div>
-                </div>
-                <div class="showcase-item">
-                    <img src="assets/screenshots/9.png" alt="How ThinQr Works" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">08</span><span class="showcase-title">How ThinQr Works</span></div>
-                </div>
-                <div class="showcase-item">
                     <img src="assets/screenshots/11.png" alt="Cognitive Toolkit" class="showcase-img" loading="lazy" decoding="async">
-                    <div class="showcase-meta"><span class="showcase-num">09</span><span class="showcase-title">Cognitive Toolkit</span></div>
+                    <div class="showcase-meta"><span class="showcase-num">06</span><span class="showcase-title">Cognitive Toolkit</span></div>
                 </div>
             </div>
         </div>
@@ -3701,7 +3684,7 @@
                     <p class="plan-tagline" style="color: var(--accent-green);">Free download · 30%+ of all content unlocked</p>
                     <ul>
                         <li>Trails 1–3 (16 bites, 116 cards) + 5 teaser bites from Pro</li>
-                        <li>Full Mind Type Assessment + ThinQr Score</li>
+                        <li>Full ThinQr Mind Type Assessment + ThinQr Score</li>
                         <li>Preview of all 8 reference guides (Bias, Fallacy, Frameworks, Decision Tools, Questioning,
                             Ethics, Reasoning, Cause &amp; Effect)</li>
                         <li>Thinking Journal</li>
@@ -4114,7 +4097,7 @@
                         </tr>
                         <tr>
                             <td>Mind Type / cognitive identity</td>
-                            <td class="col-brand"><span class="yes-brand">✓ MBTI-style</span></td>
+                            <td class="col-brand"><span class="yes-brand">✓ 16-archetype model</span></td>
                             <td><span class="no">✗</span></td>
                             <td><span class="no">✗</span></td>
                             <td><span class="no">✗</span></td>
@@ -4175,11 +4158,8 @@
                         subscription, no recurring charge.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>What is the Mind Type Assessment?</summary>
-                    <div class="faq-body">MBTI revealed how you interact with the world — taken by 2M people a year and
-                        used by 89 of the Fortune 100. ThinQr's WHO assessment reveals how you think through it. Get a
-                        4-letter Mind Type, a 0–100 ThinQr Score, and a personalized growth plan that points to the
-                        exact trails to level up your weakest skills.</div>
+                    <summary>What is the ThinQr Mind Type Assessment?</summary>
+                    <div class="faq-body">Mind Type is our independent cognitive-style framework — 4 axes (Approach, Stance, Lens, Scope) producing 16 archetypes, plus a 0–100 ThinQr Score across 8 reasoning domains. <strong>Different from personality typologies like MBTI:</strong> instead of mapping how you interact with the world, it maps how you reason through it (logic, bias awareness, evidence handling, decisions). And unlike a frozen label, your Mind Type evolves as you train — retake monthly to track growth. Every result ships with a personalized growth plan that points to the exact trails to close your gaps.</div>
                 </details>
                 <details class="faq-item">
                     <summary>What happens if I lose my streak?</summary>
@@ -4338,7 +4318,7 @@
                 style="color: var(--brand-light); text-decoration: none; font-weight: 600;">TriVeer.AI</a>
         </div>
         <p class="footer-copy">&copy; 2026 TriVeer AI. All rights reserved.</p>
-        <p class="footer-copy" style="font-size: 0.72rem; color: var(--muted); max-width: 720px; margin: 12px auto 0; line-height: 1.5;">MBTI&reg; is a registered trademark of The Myers-Briggs Company. ThinQr is not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company. References to MBTI on this page are comparative only. The Mind Type framework is an independent cognitive-style model developed by TriVeer AI.</p>
+        <p class="footer-copy" style="font-size: 0.72rem; color: var(--muted); max-width: 720px; margin: 12px auto 0; line-height: 1.5;">MBTI&reg; is a registered trademark of The Myers-Briggs Company. ThinQr is not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company. References to MBTI on this page are comparative only. The ThinQr Mind Type framework is an independent cognitive-style model developed by TriVeer AI.</p>
     </footer>
 
     <!-- ======= FEEDBACK MODAL ======= -->
@@ -4652,6 +4632,124 @@
 
             counters.forEach(counter => counterObserver.observe(counter));
 
+        })();
+
+        /* ===== DRAGGABLE MARQUEES (mouse + touch) ===== */
+        (function () {
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const wrappers = document.querySelectorAll('.marquee-wrapper, .showcase-marquee-wrapper');
+
+            wrappers.forEach(wrapper => {
+                const track = wrapper.querySelector('.marquee-track, .showcase-marquee-track');
+                if (!track) return;
+
+                const cs = getComputedStyle(track);
+                const durationMs = (parseFloat(cs.animationDuration) || 90) * 1000;
+
+                // Replace CSS animation with JS-driven transform so we can interleave dragging.
+                track.style.animation = 'none';
+                track.style.willChange = 'transform';
+
+                // Measure half-width AFTER any image lazy-load layout. Track content is duplicated → loop wraps at -halfWidth.
+                let halfWidth = track.scrollWidth / 2;
+                const remeasure = () => { halfWidth = track.scrollWidth / 2; };
+                window.addEventListener('resize', remeasure);
+                // Images may load late; remeasure when they do.
+                track.querySelectorAll('img').forEach(img => {
+                    if (!img.complete) img.addEventListener('load', remeasure, { once: true });
+                });
+
+                let translateX = 0;
+                let isDown = false;
+                let isHovering = false;
+                let dragStartX = 0;
+                let dragStartTx = 0;
+                let lastTs = performance.now();
+                let movedDuringDrag = false;
+
+                const pxPerMs = () => halfWidth / durationMs;
+
+                const wrap = () => {
+                    if (halfWidth <= 0) return;
+                    while (translateX <= -halfWidth) translateX += halfWidth;
+                    while (translateX > 0) translateX -= halfWidth;
+                };
+
+                function tick(ts) {
+                    const dt = ts - lastTs;
+                    lastTs = ts;
+                    if (!prefersReduced && !isDown && !isHovering) {
+                        translateX -= pxPerMs() * dt;
+                        wrap();
+                        track.style.transform = `translateX(${translateX}px)`;
+                    }
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+
+                // Hover pauses auto-scroll (matches old CSS behavior)
+                wrapper.addEventListener('mouseenter', () => { isHovering = true; });
+                wrapper.addEventListener('mouseleave', () => { isHovering = false; });
+
+                // Mouse drag
+                wrapper.style.cursor = 'grab';
+                wrapper.addEventListener('mousedown', (e) => {
+                    if (e.button !== 0) return;
+                    isDown = true;
+                    movedDuringDrag = false;
+                    dragStartX = e.pageX;
+                    dragStartTx = translateX;
+                    wrapper.style.cursor = 'grabbing';
+                    e.preventDefault();
+                });
+                window.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    const delta = e.pageX - dragStartX;
+                    if (Math.abs(delta) > 3) movedDuringDrag = true;
+                    translateX = dragStartTx + delta;
+                    wrap();
+                    track.style.transform = `translateX(${translateX}px)`;
+                });
+                window.addEventListener('mouseup', () => {
+                    if (!isDown) return;
+                    isDown = false;
+                    wrapper.style.cursor = 'grab';
+                });
+
+                // Click-suppression after drag so accidental drags don't trigger card link clicks.
+                wrapper.addEventListener('click', (e) => {
+                    if (movedDuringDrag) { e.preventDefault(); e.stopPropagation(); movedDuringDrag = false; }
+                }, true);
+
+                // Touch drag
+                wrapper.addEventListener('touchstart', (e) => {
+                    isDown = true;
+                    dragStartX = e.touches[0].pageX;
+                    dragStartTx = translateX;
+                }, { passive: true });
+                wrapper.addEventListener('touchmove', (e) => {
+                    if (!isDown) return;
+                    const delta = e.touches[0].pageX - dragStartX;
+                    translateX = dragStartTx + delta;
+                    wrap();
+                    track.style.transform = `translateX(${translateX}px)`;
+                }, { passive: true });
+                wrapper.addEventListener('touchend', () => { isDown = false; });
+                wrapper.addEventListener('touchcancel', () => { isDown = false; });
+
+                // Mouse wheel → horizontal scroll only when deltaX dominates (trackpad swipe) or shift held.
+                // Pure vertical wheels pass through so page scroll still works over marquees.
+                wrapper.addEventListener('wheel', (e) => {
+                    const horizontalIntent = Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey;
+                    if (!horizontalIntent) return;
+                    const dx = e.shiftKey && Math.abs(e.deltaX) < Math.abs(e.deltaY) ? e.deltaY : e.deltaX;
+                    if (Math.abs(dx) < 1) return;
+                    e.preventDefault();
+                    translateX -= dx;
+                    wrap();
+                    track.style.transform = `translateX(${translateX}px)`;
+                }, { passive: false });
+            });
         })();
     </script>
 </body>
