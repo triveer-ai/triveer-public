@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found — ThinQr</title>
+    <link rel="icon" type="image/png" href="assets/thinqr-logo-200.png">
+    <meta name="robots" content="noindex">
+
+    <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/spacegrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>
+        @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('assets/fonts/inter-var-latin.woff2') format('woff2'); }
+        @font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('assets/fonts/spacegrotesk-var-latin.woff2') format('woff2'); }
+
+        :root { --bg: #0D1117; --brand: #6C5CE7; --brand-light: #A29BFE; --accent-teal: #00B894; --text: #E6EDF3; --muted: rgba(230, 237, 243, 0.85); --dim: rgba(230, 237, 243, 0.6); }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; line-height: 1.65; text-align: center; }
+        .wrap { max-width: 520px; }
+        .logo { width: 80px; height: 80px; border-radius: 18px; margin: 0 auto 24px; display: block; }
+        .code {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 800;
+            font-size: clamp(4rem, 12vw, 6.5rem); line-height: 1;
+            background: linear-gradient(135deg, var(--brand), var(--brand-light), var(--accent-teal));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            margin-bottom: 12px;
+        }
+        h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1.6rem; margin-bottom: 12px; }
+        p { color: var(--muted); margin-bottom: 28px; font-size: 1rem; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px;
+            border-radius: 12px; background: linear-gradient(135deg, var(--brand), var(--brand-light));
+            color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4); transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .links { margin-top: 24px; font-size: 0.88rem; color: var(--dim); }
+        .links a { color: var(--brand-light); text-decoration: none; margin: 0 10px; font-weight: 600; }
+        .links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="assets/thinqr-logo-200.png" alt="ThinQr" class="logo" width="80" height="80">
+        <div class="code">404</div>
+        <h1>Lost in thought.</h1>
+        <p>The page you were looking for doesn't exist — or maybe it was a cognitive bias you should question. Let's get you back on a productive trail.</p>
+        <a href="index.html" class="btn">🧠 Back to ThinQr</a>
+        <div class="links">
+            <a href="mindtype/">Take the Mind Type Quiz</a>
+            <a href="index.html#waitlist">Join the Waitlist</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://triveer.ai/sitemap.xml

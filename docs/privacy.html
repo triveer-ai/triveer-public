@@ -10,12 +10,10 @@
     <link rel="icon" type="image/png" href="assets/triveer-logo.png">
     <link rel="apple-touch-icon" href="assets/kaid-logo.png">
     <link rel="canonical" href="https://triveer.ai/privacy.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <meta name="theme-color" content="#000814">
     <style>
+        @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('assets/fonts/inter-var-latin.woff2') format('woff2'); }
+        @font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('assets/fonts/spacegrotesk-var-latin.woff2') format('woff2'); }
         :root {
             --bg: #000814;
             --cyan: #00F7FF;
@@ -553,16 +551,13 @@
     <!-- NAV -->
     <nav>
         <a href="index.html" class="nav-brand">
-            <img src="assets/kaid-logo.png" alt="KAID Logo" class="nav-logo-img">
+            <img src="assets/triveer-logo.png" alt="TriVeer.AI Logo" class="nav-logo-img">
             <div>
                 <div>
                     <span class="nav-rainbow">
-                        <span class="nav-kaid">KAID</span>
-                        <span class="nav-sep"> · </span>
-                        <span class="nav-sub">Kids AI Dojo</span>
+                        <span class="nav-kaid">TriVeer.AI</span>
                     </span>
                 </div>
-                <div class="nav-powered">by TriVeer.AI</div>
             </div>
         </a>
         <a href="index.html" class="nav-back">← Back to Home</a>
@@ -572,7 +567,7 @@
     <div class="pp-hero">
         <div class="pp-label">🔒 Legal</div>
         <h1 class="pp-title">Privacy Policy</h1>
-        <p class="pp-date">Last Updated: February 18, 2026</p>
+        <p class="pp-date">Last Updated: May 10, 2026</p>
     </div>
 
     <!-- CONTENT -->
@@ -580,74 +575,68 @@
 
         <!-- tl;dr -->
         <div class="tldr-card">
-            <h3>tl;dr for Parents</h3>
-            <p><strong style="color:var(--text)">Kids AI Dojo (KAID)</strong> is designed to be completely safe and
-                private.</p>
+            <h3>tl;dr</h3>
+            <p><strong style="color:var(--text)">TriVeer AI</strong> applications are designed with privacy as a foundational priority.</p>
             <ul>
-                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> collect any personal
-                        information.</span></li>
-                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> use any analytics or tracking.</span>
-                </li>
-                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> show ads.</span></li>
-                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> share any sensitive data with third
-                        parties.</span></li>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> sell your data.</span></li>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> use third-party analytics or invasive tracking.</span></li>
+                <li><span class="icon">🚫</span><span>We do <strong>NOT</strong> show external advertisements.</span></li>
+                <li><span class="icon">💾</span><span>We default to <strong>local, on-device storage</strong> whenever possible.</span></li>
             </ul>
         </div>
 
         <!-- Sections -->
         <div class="pp-section">
-            <h2>1. Information Collection & COPPA Compliance</h2>
-            <p>We do not collect, store, or share any personal information from children or adults. No sensitive data
-                leaves the app. In compliance with the Children's Online Privacy Protection Act (COPPA), we do not
-                knowingly collect personal information from children under the age of 13.</p>
+            <h2>1. Our Applications</h2>
+            <p>This privacy policy applies to all applications and websites provided by TriVeer AI, including but not limited to:</p>
+            <ul style="margin: 0 0 14px 22px; color: var(--muted); font-size: 0.95rem;">
+                <li style="margin-bottom: 6px;"><strong>KAID: Kids AI Dojo:</strong> An educational roleplay app for children.</li>
+                <li style="margin-bottom: 6px;"><strong>ThinQr:</strong> A cognitive framework and critical thinking app for adults.</li>
+            </ul>
         </div>
 
         <div class="pp-section">
-            <h2>2. App Data & Data Deletion</h2>
-            <p>Any data used in the app are saved securely and solely on your device. Uninstalling the app will
-                instantly remove all saved data. Because no data is collected or transmitted to our servers, we have no
-                accounts to delete and no user data on file to fulfill deletion requests under GDPR, CCPA, or App Store
-                guidelines.</p>
+            <h2>2. Data Stored Locally (On Your Device)</h2>
+            <p>The vast majority of app data is stored securely and solely on your device. Uninstalling the app instantly removes all locally stored data. Because this data never leaves your device, we have no access to it, no accounts to delete, and no user data on file to fulfill deletion requests under GDPR, CCPA, or App Store guidelines.</p>
+            <p>Locally stored data includes:</p>
+            <ul style="margin: 0 0 14px 22px; color: var(--muted); font-size: 0.95rem;">
+                <li style="margin-bottom: 6px;"><strong>In KAID:</strong> All interactions, voice recordings (Personal Voice), progress, and settings.</li>
+                <li style="margin-bottom: 6px;"><strong>In ThinQr:</strong> Learning progress, Thinking Journal entries, Mind Type assessment results, and settings.</li>
+            </ul>
         </div>
 
         <div class="pp-section">
-            <h2>3. AI &amp; Voice Features</h2>
-            <p>Your child's interactions within the app are never shared with or transmitted to any third party. All
-                voice recordings made using the Personal Voice feature stay entirely on your device and are never
-                uploaded anywhere.</p>
+            <h2>3. Cloud Data (Optional Features)</h2>
+            <p>Certain optional features may utilize Apple's CloudKit to sync limited data. This data is linked to your iCloud account, stored securely by Apple, and is only accessible by you or users you explicitly share it with.</p>
+            <ul style="margin: 0 0 14px 22px; color: var(--muted); font-size: 0.95rem;">
+                <li style="margin-bottom: 6px;"><strong>ThinQr "Think Squads":</strong> If you join a squad, your display name, weekly XP, bites completed, streak, and rank are stored in CloudKit to enable the squad leaderboard. Leaving a squad removes your record.</li>
+                <li style="margin-bottom: 6px;"><strong>KAID:</strong> No data is ever synced to the cloud. It remains 100% on-device.</li>
+            </ul>
         </div>
 
         <div class="pp-section">
-            <h2>4. External Links</h2>
-            <p>The app contains links to this privacy policy and support pages in the Parents Area. These links are
-                protected by a Parental Gate to ensure children do not inadvertently access the web.</p>
+            <h2>4. Children's Privacy (COPPA)</h2>
+            <p>We do not collect, store, or share any personal information from children or adults within our apps. In compliance with the Children's Online Privacy Protection Act (COPPA), we do not knowingly collect personal information from children under the age of 13. The KAID app is fully COPPA compliant and uses Parental Gates for external links.</p>
         </div>
 
         <div class="pp-section">
-            <h2>5. Disclaimers & Limitation of Liability</h2>
-            <p><strong>Original & Fictional Content:</strong> All roleplay scenarios, characters, and storylines within
-                the Kids AI Dojo app are entirely fictional. Any resemblance to real persons,
-                living or dead, or actual real-world events is purely coincidental.</p>
-            <p style="margin-top:12px"><strong>Educational Purposes Only:</strong> The content provided in the app is
-                for general educational and entertainment purposes only. While our scenarios aim to guide children in
-                positive decision-making and soft skill development, the app does not provide professional behavioral,
-                psychological, or medical advice. Parents and guardians are solely responsible for guiding their child's
-                development and interpreting any lessons from the app.</p>
-            <p style="margin-top:12px"><strong>No Warranties:</strong> The App is provided "AS-IS" and "AS AVAILABLE,"
-                without warranty of any kind. We disclaim all warranties, whether express, implied, or statutory,
-                including but not limited to implied warranties of merchantability, fitness for a particular purpose,
-                and non-infringement.</p>
-            <p style="margin-top:12px"><strong>Limitation of Liability:</strong> To the maximum extent permitted by
-                applicable law, TriVeer.AI and the creators of KAID shall not be liable for any indirect, incidental,
-                special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred
-                directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from
-                your access to or use of or inability to access or use the application.</p>
+            <h2>5. Websites &amp; Waitlists</h2>
+            <p>The TriVeer AI marketing websites use no analytics SDKs and no third-party trackers. Fonts are self-hosted. The only outbound network requests occur when you voluntarily submit a waitlist, feedback, or issue form. We record only the email address and content you provide. We do not set tracking cookies. Standard web-server logs (including IP address) may be retained transiently for security and abuse-prevention purposes and are deleted on a rolling basis.</p>
         </div>
 
         <div class="pp-section">
-            <h2>6. Contact Us</h2>
-            <p>For inquiries, or to contact TriVeer.AI as the operator of this application regarding privacy practices,
-                please email us at <a href="mailto:kaid@triveer.ai">kaid@triveer.ai</a></p>
+            <h2>6. Email Service Provider</h2>
+            <p>When you submit a waitlist, feedback, or issue form on our marketing websites, your email address (and any message content) is transmitted to <strong>Brevo</strong> (Sendinblue SAS, EU-hosted) so we can deliver launch and follow-up emails. Brevo acts as our email service provider and is bound by its own privacy commitments — see <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">Brevo's privacy notice</a>. Beyond Brevo and Apple's own platform services (StoreKit for purchases, iCloud for optional sync), no other third-party SDKs, analytics, or services are integrated into our apps or websites.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>7. Your Rights (GDPR / CCPA)</h2>
+            <p>Depending on where you live, you may have rights to access, correct, delete, or port the personal data we hold about you, and to object to or restrict certain processing. Because most data lives only on your device, you can exercise these rights by uninstalling the app or deleting your local data. For data submitted via website forms (e.g., waitlist email), email <a href="mailto:hello@triveer.ai">hello@triveer.ai</a> and we will respond within the timeframes required by applicable law. We do not sell or share personal information for cross-context behavioral advertising as defined under the CCPA/CPRA.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>8. Contact Us</h2>
+            <p>For inquiries regarding our privacy practices, please email us at <a href="mailto:hello@triveer.ai">hello@triveer.ai</a>.</p>
             <p style="margin-top:12px">To report technical issues, <a href="#issue">raise an issue</a>.</p>
             <p style="margin-top:12px">Have an idea or suggestion? <a href="#feedback">Submit a feature request</a>.</p>
         </div>
@@ -660,16 +649,12 @@
             <div class="foot-inner">
                 <div>
                     <div style="display:flex;align-items:center;gap:14px">
-                        <img src="assets/kaid-logo.png" alt="KAID" style="height:40px;width:40px;object-fit:contain">
-                        <div style="width:1px;height:36px;background:rgba(255,255,255,0.1)"></div>
                         <img src="assets/triveer-logo.png" alt="TriVeer.AI"
                             style="height:36px;width:36px;object-fit:contain">
                         <div>
                             <div>
                                 <span class="nav-rainbow">
-                                    <span class="nav-kaid">KAID</span>
-                                    <span class="nav-sep"> · </span>
-                                    <span class="nav-sub">Kids AI Dojo</span>
+                                    <span class="nav-kaid">TriVeer.AI</span>
                                 </span>
                             </div>
                             <div class="foot-copy">© 2026 TriVeer.AI · All rights reserved</div>
@@ -679,7 +664,8 @@
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:14px">
                     <ul class="foot-links">
                         <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="mailto:kaid@triveer.ai">Contact</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="mailto:hello@triveer.ai">Contact</a></li>
                         <li><a href="#feedback">Feature Request / Feedback</a></li>
                         <li><a href="#issue">Raise Issue</a></li>
                     </ul>

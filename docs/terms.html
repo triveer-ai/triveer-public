@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — TriVeer AI</title>
+    <meta name="description"
+        content="TriVeer AI Terms of Service for KAID, ThinQr, and other applications.">
+    <link rel="icon" type="image/png" href="assets/triveer-logo.png">
+    <link rel="canonical" href="https://triveer.ai/terms.html">
+    <meta name="theme-color" content="#000814">
+    <style>
+        @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('assets/fonts/inter-var-latin.woff2') format('woff2'); }
+        @font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('assets/fonts/spacegrotesk-var-latin.woff2') format('woff2'); }
+        :root {
+            --bg: #000814;
+            --cyan: #00F7FF;
+            --green: #38FF12;
+            --magenta: #FF40A6;
+            --orange: #FF5F1F;
+            --purple: #B34DFF;
+            --yellow: #FDFF00;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.10);
+            --text: #ffffff;
+            --muted: rgba(255, 255, 255, 0.90);
+            --dim: rgba(255, 255, 255, 0.75);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 64px;
+            background: rgba(0, 8, 20, 0.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            height: 34px;
+            width: 34px;
+            object-fit: contain;
+        }
+
+        @keyframes rainbow-flow {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .nav-rainbow {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(90deg, #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+            white-space: nowrap;
+        }
+
+        .nav-rainbow .nav-kaid {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .nav-rainbow .nav-sep {
+            font-weight: 400;
+            font-size: 0.82rem;
+            opacity: 0.6;
+        }
+
+        .nav-rainbow .nav-sub {
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+
+        .nav-back {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 100px;
+            padding: 7px 18px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+
+        /* ── HERO BANNER ── */
+        .pp-hero {
+            text-align: center;
+            padding: 80px 24px 56px;
+            background: linear-gradient(180deg, rgba(0, 247, 255, 0.04) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .pp-label {
+            display: inline-block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            border: 1px solid rgba(0, 247, 255, 0.28);
+            border-radius: 100px;
+            padding: 5px 16px;
+            margin-bottom: 20px;
+        }
+
+        .pp-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            background: linear-gradient(90deg, #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+            animation-delay: -1s;
+        }
+
+        .pp-date {
+            font-size: 0.82rem;
+            color: var(--dim);
+        }
+
+        /* ── CONTENT ── */
+        .pp-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 56px 24px 100px;
+        }
+
+        .pp-section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .pp-section:hover {
+            border-color: rgba(0, 247, 255, 0.2);
+        }
+
+        .pp-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(90deg, #00F7FF, #38FF12, #FDFF00, #FF5F1F, #FF40A6, #B34DFF, #00F7FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-flow 5s linear infinite;
+        }
+
+        .pp-section p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+
+        .pp-section ul {
+            margin: 0 0 14px 22px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .pp-section li {
+            margin-bottom: 6px;
+        }
+
+        .pp-section a {
+            color: var(--cyan);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 247, 255, 0.3);
+            transition: border-color 0.2s;
+        }
+
+        .pp-section a:hover {
+            border-color: var(--cyan);
+        }
+
+        /* ── FOOTER ── */
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 44px 0;
+            text-align: center;
+        }
+
+        .foot-copy {
+            font-size: 0.85rem;
+            color: var(--dim);
+            margin-top: 12px;
+        }
+
+        @media (max-width: 600px) {
+            nav { padding: 0 18px; }
+            .pp-hero { padding: 56px 18px 40px; }
+            .pp-section { padding: 22px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="assets/triveer-logo.png" alt="TriVeer.AI Logo" class="nav-logo-img">
+            <div>
+                <div>
+                    <span class="nav-rainbow">
+                        <span class="nav-kaid">TriVeer.AI</span>
+                    </span>
+                </div>
+            </div>
+        </a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <!-- HERO -->
+    <div class="pp-hero">
+        <div class="pp-label">🔒 Legal</div>
+        <h1 class="pp-title">Terms of Service</h1>
+        <p class="pp-date">Last Updated: May 10, 2026</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="pp-content">
+        
+        <div class="pp-section">
+            <p>By downloading, installing, or using any applications or websites provided by TriVeer AI, including but not limited to KAID (Kids AI Dojo) and ThinQr (collectively, the "Services"), you agree to these Terms of Service. If you do not agree, please do not use the Services.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>1. The Services</h2>
+            <p>TriVeer AI develops educational and productivity applications. Our Services include:</p>
+            <ul>
+                <li><strong>KAID: Kids AI Dojo</strong> — An educational roleplay app designed for children to learn soft skills.</li>
+                <li><strong>ThinQr</strong> — An app delivering bite-sized critical thinking lessons and cognitive frameworks.</li>
+            </ul>
+        </div>
+
+        <div class="pp-section">
+            <h2>2. Pricing and Purchases</h2>
+            <p>Many of our Services are offered for free or include a free tier. Where premium features are available (such as "ThinQr Pro"), they may be offered as one-time, non-consumable in-app purchases. All purchases are processed securely by Apple via StoreKit and are subject to Apple's Media Services Terms and Conditions. TriVeer AI does not store or process payment information directly.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>3. Refunds</h2>
+            <p>All in-app purchase refunds are handled by Apple. If you would like a refund, please request one through Apple's standard refund process at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>4. License and Acceptable Use</h2>
+            <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use our Services for personal, non-commercial purposes. You agree not to:</p>
+            <ul>
+                <li>Reverse engineer, decompile, or attempt to extract the source code of any application.</li>
+                <li>Use the Services for any unlawful purpose.</li>
+                <li>Resell, redistribute, or sublicense the applications or their content.</li>
+                <li>Abuse online features, such as the Think Squad in ThinQr, to harass or spam other users.</li>
+            </ul>
+        </div>
+
+        <div class="pp-section">
+            <h2>5. Content and Intellectual Property</h2>
+            <p>All content within our Services — including roleplay scenarios, educational trails, UI designs, character art, the Mind Type framework, glossaries, illustrations, and the TriVeer AI, KAID, and ThinQr brands — is the intellectual property of TriVeer AI and is protected by copyright and trademark law. Personal share cards generated by the apps may be shared on social media with our blessing.</p>
+            <p><strong>Third-Party Trademarks.</strong> All other product names, logos, and brands referenced on our websites or within our Services — including but not limited to MBTI®, Myers-Briggs®, Brilliant, Duolingo, Lumosity, and Calm — are the property of their respective owners. References to such marks are made for nominative, comparative, or descriptive purposes only and do not imply any affiliation with, endorsement by, or sponsorship from those owners. The Mind Type framework is an independent cognitive-style model developed by TriVeer AI and is not derived from, licensed by, or affiliated with The Myers-Briggs Company.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>6. User-Generated Content & Privacy</h2>
+            <p>Our applications prioritize local storage to protect your privacy. Most data, such as Thinking Journal entries in ThinQr or voice interactions in KAID, remain strictly on your device. For details on how we handle data and specific exceptions (such as optional iCloud syncing), please see our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>7. Disclaimers</h2>
+            <p><strong>Educational Purposes Only:</strong> The content provided in our Services is for general educational and entertainment purposes only. While our apps aim to guide users in critical thinking, logic, cognitive skill development, and positive decision-making, they do not provide professional behavioral, psychological, financial, or medical advice. Parents and guardians are solely responsible for guiding their child's development when using apps like KAID.</p>
+            <p><strong>No Warranties:</strong> The Services are provided "as is" and "as available" without warranties of any kind. While we work hard to make the Services accurate and useful, we do not guarantee that skills learned via the apps will produce specific outcomes in your personal or professional life. We disclaim all warranties, whether express, implied, or statutory, including but not limited to implied warranties of merchantability and fitness for a particular purpose.</p>
+            <p><strong>Fictional Content:</strong> All roleplay scenarios and characters within apps like KAID are entirely fictional. Any resemblance to real persons, living or dead, or actual real-world events is purely coincidental.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>8. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, TriVeer AI shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising from your use of the Services, or any loss of profits, data, use, or goodwill. Our total liability for any claim is limited to the amount you paid for the app in the prior 12 months.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>9. Who Can Use the Apps</h2>
+            <p>KAID is designed for children with parental consent and supervision and is offered in compliance with COPPA. ThinQr is intended for users aged 13 and older. If you are under the age of majority in your country, please use the apps with the involvement of a parent or guardian.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>10. Severability</h2>
+            <p>If any part of these Terms is found unenforceable, the rest still applies. Together with our <a href="privacy.html">Privacy Policy</a>, this is the full agreement between you and TriVeer AI regarding the Services. If you have a concern, please email us first at <a href="mailto:hello@triveer.ai">hello@triveer.ai</a> — we'd much rather work it out directly.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>11. Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. Material changes will be communicated via the apps or this website. Continued use of the Services after changes are posted constitutes acceptance of the updated Terms.</p>
+        </div>
+
+        <div class="pp-section">
+            <h2>12. Contact Us</h2>
+            <p>For inquiries regarding these Terms of Service, please email us at <a href="mailto:hello@triveer.ai">hello@triveer.ai</a>.</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div style="display:flex; justify-content:center; align-items:center; gap:14px; margin-bottom: 12px;">
+                <a href="index.html" style="color:var(--cyan); text-decoration:none; font-size: 0.9rem;">Home</a>
+                <span style="color:rgba(255,255,255,0.2)">|</span>
+                <a href="privacy.html" style="color:var(--cyan); text-decoration:none; font-size: 0.9rem;">Privacy Policy</a>
+                <span style="color:rgba(255,255,255,0.2)">|</span>
+                <a href="mailto:hello@triveer.ai" style="color:var(--cyan); text-decoration:none; font-size: 0.9rem;">Support</a>
+            </div>
+            <div class="foot-copy">© 2026 TriVeer.AI · All rights reserved</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Mind Type? — Free 3-Minute Critical Thinking Assessment | ThinQr</title>
+    <meta name="description"
+        content="Discover your 4-letter critical thinking style in 3 minutes. Like MBTI, but for how you reason. Free, no signup, instant results.">
+    <link rel="icon" type="image/png" href="../assets/thinqr-logo-200.png">
+    <link rel="apple-touch-icon" href="../assets/thinqr-logo-200.png">
+    <meta name="theme-color" content="#0D1117">
+    <meta property="og:title" content="What's Your Mind Type? — ThinQr">
+    <meta property="og:description"
+        content="Discover your 4-letter critical thinking style in 3 minutes. Free, no signup, instant results.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://triveer.ai/thinqr/mindtype/">
+    <meta property="og:image" content="https://triveer.ai/thinqr/assets/thinqr-og-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What's Your Mind Type? — ThinQr">
+    <meta name="twitter:description"
+        content="Discover your 4-letter critical thinking style in 3 minutes. Free, no signup, instant results.">
+    <meta name="twitter:image" content="https://triveer.ai/thinqr/assets/thinqr-og-1200x630.jpg">
+    <link rel="canonical" href="https://triveer.ai/thinqr/mindtype/">
+
+    <link rel="preload" href="../assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/spacegrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "ThinQr Mind Type Assessment",
+      "about": "A 12-question critical thinking style assessment producing a 4-letter Mind Type and 0-100 ThinQr Score.",
+      "url": "https://triveer.ai/thinqr/mindtype/",
+      "publisher": { "@type": "Organization", "name": "TriVeer AI", "url": "https://triveer.ai" }
+    }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400 600;
+            font-display: swap;
+            src: url('../assets/fonts/inter-var-latin.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 400 800;
+            font-display: swap;
+            src: url('../assets/fonts/spacegrotesk-var-latin.woff2') format('woff2');
+        }
+
+        :root {
+            --bg: #0D1117;
+            --bg2: #161B22;
+            --card-bg: rgba(108, 92, 231, 0.06);
+            --card-border: rgba(108, 92, 231, 0.18);
+            --brand: #6C5CE7;
+            --brand-light: #A29BFE;
+            --accent-teal: #00B894;
+            --accent-green: #2EA043;
+            --text: #E6EDF3;
+            --muted: rgba(230, 237, 243, 0.85);
+            --dim: rgba(230, 237, 243, 0.6);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.65;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        nav {
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(108, 92, 231, 0.12);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 7px;
+        }
+
+        .nav-logo span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        nav .back {
+            color: var(--brand-light);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        nav .back:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        .intro h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 18px;
+        }
+
+        .intro h1 .grad {
+            background: linear-gradient(90deg, #6C5CE7, #A29BFE, #00B894);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow 6s linear infinite;
+        }
+
+        @keyframes rainbow {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .intro p {
+            font-size: 1.08rem;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .intro .meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin: 22px 0 28px;
+            font-size: 0.9rem;
+            color: var(--dim);
+        }
+
+        .intro .meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.98rem;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand), var(--brand-light));
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-ghost {
+            background: rgba(108, 92, 231, 0.12);
+            color: var(--brand-light);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+        }
+
+        .progress-wrap {
+            margin-bottom: 28px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--brand), var(--accent-teal));
+            border-radius: 99px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-label {
+            font-size: 0.82rem;
+            color: var(--dim);
+            margin-top: 8px;
+            text-align: right;
+            letter-spacing: 0.04em;
+        }
+
+        .question-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-top: 3px solid var(--brand);
+            border-radius: 18px;
+            padding: 32px 28px;
+            margin-bottom: 24px;
+        }
+
+        .question-card .q-tag {
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--brand-light);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .question-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            text-align: left;
+            padding: 16px 20px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: var(--text);
+            font-size: 0.96rem;
+            line-height: 1.5;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .option:hover {
+            background: rgba(108, 92, 231, 0.10);
+            border-color: var(--brand);
+            transform: translateX(4px);
+        }
+
+        /* Result card */
+        .result {
+            background: linear-gradient(160deg, rgba(108, 92, 231, 0.18), rgba(0, 184, 148, 0.10));
+            border: 1px solid rgba(108, 92, 231, 0.4);
+            border-radius: 24px;
+            padding: 40px 32px;
+            box-shadow: 0 24px 60px rgba(108, 92, 231, 0.18);
+            text-align: center;
+        }
+
+        .result .r-tag {
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--brand-light);
+            font-weight: 700;
+        }
+
+        .result .r-code {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: clamp(3.5rem, 10vw, 5.5rem);
+            letter-spacing: 0.05em;
+            line-height: 1;
+            background: linear-gradient(135deg, #6C5CE7, #A29BFE, #00B894);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 14px 0 6px;
+        }
+
+        .result .r-name {
+            font-size: 1.6rem;
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .result .r-match {
+            font-size: 0.9rem;
+            color: var(--dim);
+            margin-bottom: 28px;
+        }
+
+        .axes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+
+        .axis-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+        }
+
+        .axis-name {
+            width: 110px;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .axis-bar {
+            flex: 1;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 99px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .axis-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, var(--brand), var(--accent-teal));
+            border-radius: 99px;
+            transition: width 0.8s ease;
+        }
+
+        .axis-pct {
+            width: 44px;
+            text-align: right;
+            color: var(--brand-light);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .score-box {
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 28px;
+        }
+
+        .score-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 3rem;
+            color: var(--accent-teal);
+            line-height: 1;
+        }
+
+        .score-label {
+            font-size: 0.95rem;
+            color: var(--muted);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .strengths {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.18);
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 24px;
+        }
+
+        .strengths h4 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .strengths p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .strengths .pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .strengths .pair {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+
+        .share-row {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .share-btn:hover {
+            background: rgba(108, 92, 231, 0.15);
+            border-color: var(--brand);
+            color: #fff;
+        }
+
+        .share-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--dim);
+            margin-top: 28px;
+            line-height: 1.6;
+        }
+
+        .footer-note a {
+            color: var(--brand-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .intro h1 .grad,
+            .result .r-code,
+            .axis-fill {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/thinqr-logo-200.png" alt="ThinQr logo" width="32" height="32">
+            <span>ThinQr</span>
+        </a>
+        <a href="../index.html" class="back">← Back to ThinQr</a>
+    </nav>
+
+    <main>
+        <!-- Intro -->
+        <section id="intro" class="intro">
+            <h1>What's Your <span class="grad">Mind Type</span>?</h1>
+            <p>Myers-Briggs revealed how you <em>interact</em> with the world. ThinQr reveals how you <em>think
+                    through</em> it. Discover your 4-letter critical thinking style — like MBTI, but for reasoning.</p>
+            <div class="meta">
+                <span>⏱ 3 minutes</span>
+                <span>📋 12 scenarios</span>
+                <span>🔒 No signup</span>
+                <span>📱 Free</span>
+            </div>
+            <button class="btn btn-primary" onclick="startQuiz()">🧠 Start the Assessment</button>
+            <p class="footer-note" style="margin-top: 18px; text-align: left;">This is a free 12-question web preview.
+                The full ThinQr app uses 96 questions across 24 randomized scenarios for higher accuracy and adds an
+                8-domain ThinQr Score with monthly retakes.</p>
+        </section>
+
+        <!-- Quiz -->
+        <section id="quiz" style="display: none;">
+            <div class="progress-wrap">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <div class="progress-label" id="progressLabel">Question 1 of 12</div>
+            </div>
+            <div class="question-card" id="questionCard">
+                <span class="q-tag" id="qTag">Bias Recognition</span>
+                <h3 id="qText">Loading...</h3>
+                <div class="options" id="qOptions"></div>
+            </div>
+        </section>
+
+        <!-- Result -->
+        <section id="result" style="display: none;">
+            <div class="result">
+                <span class="r-tag">Your Mind Type</span>
+                <div class="r-code" id="rCode">ASLB</div>
+                <div class="r-name" id="rName">The Systems Architect</div>
+                <div class="r-match" id="rMatch">Like Elon Musk · Marie Curie · Ada Lovelace</div>
+
+                <div class="axes" id="rAxes"></div>
+
+                <div class="score-box">
+                    <div class="score-num" id="rScore">78</div>
+                    <div class="score-label" id="rScoreLabel">/ 100 — Sharp Thinker</div>
+                </div>
+
+                <div class="strengths">
+                    <h4 id="rArchetypeName">The Systems Architect</h4>
+                    <p id="rArchetypeDesc">Loading...</p>
+                    <div class="pair">
+                        <div>
+                            <h4 style="color: var(--accent-green); margin-top: 12px;">Strengths</h4>
+                            <p id="rStrengths"></p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-teal); margin-top: 12px;">Watch out for</h4>
+                            <p id="rBlindSpots"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctas">
+                    <a href="../index.html#waitlist" class="btn btn-primary">📲 Get the Full Assessment in the App</a>
+                    <button type="button" class="btn btn-ghost" onclick="retake()">↻ Retake</button>
+                </div>
+
+                <div class="share-row">
+                    <a class="share-btn" id="shareTwitter" href="#" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        Share on X
+                    </a>
+                    <a class="share-btn" id="shareLinkedIn" href="#" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.778 13.019H3.555V9h3.56v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a class="share-btn" id="shareFacebook" href="#" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                        Facebook
+                    </a>
+                    <button type="button" class="share-btn" id="shareInstagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        <span id="igLabel">Instagram</span>
+                    </button>
+                    <button type="button" class="share-btn" id="shareCopy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="9" y="9" width="13" height="13" rx="2" />
+                            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                        </svg>
+                        <span id="copyLabel">Copy Link</span>
+                    </button>
+                </div>
+
+                <p class="footer-note">This is the 12-question web preview. The full app uses 96 questions across 24
+                    scenarios per session, plus an 8-domain ThinQr Score (Logic, Biases, Evidence, Arguments, Decisions,
+                    Creativity, Problem Solving, Meta-Cognition).<br><a href="../index.html#waitlist">Join the waitlist
+                        for the full app →</a></p>
+            </div>
+        </section>
+        <footer style="max-width: 720px; margin: 40px auto 24px; padding: 0 20px; font-size: 0.72rem; color: rgba(255,255,255,0.55); line-height: 1.55; text-align: center;">
+            <p>MBTI&reg; and Myers-Briggs&reg; are registered trademarks of The Myers-Briggs Company. ThinQr is not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company. References on this page are comparative only. The Mind Type framework is an independent cognitive-style model developed by TriVeer AI.</p>
+            <p style="margin-top: 12px;">&copy; 2026 TriVeer AI &middot; <a href="../index.html" style="color: inherit;">ThinQr</a> &middot; <a href="../../privacy.html" style="color: inherit;">Privacy</a> &middot; <a href="../../terms.html" style="color: inherit;">Terms</a></p>
+        </footer>
+    </main>
+
+    <script>
+        /* ============================================================
+           MIND TYPE QUIZ — 12 questions, 4 axes, 16 archetypes
+           Axes: A/N (Analytical/iNtuitive), S/O (Skeptical/Open),
+                 L/E (Logic-First/Empathy-First), B/D (Big-Picture/Detail)
+           Each question has 4 options, each tagged with one axis pole.
+           Pick distribution → 4-letter type. Score = how often you pick
+           a "high-quality" answer (each option also has a 0-3 rigor score).
+        ============================================================ */
+
+        const QUESTIONS = [
+            {
+                domain: "Bias Recognition",
+                q: "A team meeting is split 8-2 on a decision. The two dissenters are the most experienced people in the room. What's your move?",
+                opts: [
+                    { text: "Pause and ask the dissenters to make the strongest version of their case.", axis: "S", score: 3 },
+                    { text: "Trust the majority — eight people probably see something the two are missing.", axis: "O", score: 1 },
+                    { text: "Suggest the room steel-man both sides for 5 minutes before voting.", axis: "L", score: 3 },
+                    { text: "Side with the dissenters — go with experience over headcount.", axis: "E", score: 2 }
+                ]
+            },
+            {
+                domain: "Decision Making",
+                q: "You have to make a high-stakes call by Friday. New information might still arrive. Do you...",
+                opts: [
+                    { text: "Set a hard deadline of Thursday EOD and decide with the data you have.", axis: "A", score: 3 },
+                    { text: "Wait until Friday morning — more information almost always helps.", axis: "N", score: 1 },
+                    { text: "Decide now, then update the decision if material new info arrives.", axis: "B", score: 3 },
+                    { text: "Map the 3 most likely info-arrival scenarios and pre-decide each.", axis: "D", score: 2 }
+                ]
+            },
+            {
+                domain: "Logical Reasoning",
+                q: "Someone argues: 'Our last campaign with influencer X had 3× engagement, so we should run all campaigns through them.' What's the flaw?",
+                opts: [
+                    { text: "Sample size of one — 3× could be noise, not signal.", axis: "S", score: 3 },
+                    { text: "It assumes correlation = causation; the campaign creative might have done the work.", axis: "L", score: 3 },
+                    { text: "It's plausible if it worked once it'll work again — testing it is fine.", axis: "O", score: 1 },
+                    { text: "Influencer X may not generalize across campaign types or audiences.", axis: "E", score: 2 }
+                ]
+            },
+            {
+                domain: "Argument Analysis",
+                q: "A colleague says: 'Anyone who disagrees with this proposal just doesn't understand the data.' What's the strongest response?",
+                opts: [
+                    { text: "That's a thought-terminating cliché — it dismisses dissent without engaging it.", axis: "S", score: 3 },
+                    { text: "Ask: 'What specific objection would change your mind?' to test if it's a real argument.", axis: "L", score: 3 },
+                    { text: "They might be frustrated — let's find a calmer time to discuss.", axis: "E", score: 2 },
+                    { text: "Walk through the data once more in case there's genuine confusion.", axis: "O", score: 1 }
+                ]
+            },
+            {
+                domain: "Evidence Evaluation",
+                q: "A viral chart on social media supports a position you already agree with. Before you share, you...",
+                opts: [
+                    { text: "Find the original source and check the methodology before sharing.", axis: "A", score: 3 },
+                    { text: "Share it — if it confirms what I already know, the source matters less.", axis: "N", score: 0 },
+                    { text: "Look at the y-axis, sample, and timeframe for any cherry-picking.", axis: "D", score: 3 },
+                    { text: "Cross-check with one independent source covering the same data.", axis: "B", score: 2 }
+                ]
+            },
+            {
+                domain: "Mental Models",
+                q: "When you tackle a brand-new problem, your default is to...",
+                opts: [
+                    { text: "Map it to a similar problem you've already solved (analogical reasoning).", axis: "N", score: 2 },
+                    { text: "Decompose it into smaller components and analyze each.", axis: "A", score: 3 },
+                    { text: "Zoom out to see what system or pattern it sits inside of.", axis: "B", score: 2 },
+                    { text: "Examine the specific edge cases and constraints first.", axis: "D", score: 2 }
+                ]
+            },
+            {
+                domain: "Meta-Cognition",
+                q: "You realize halfway through a debate that you're actually wrong. What do you do?",
+                opts: [
+                    { text: "Say so out loud and update your position — strong opinions, weakly held.", axis: "S", score: 3 },
+                    { text: "Slow down, ask clarifying questions, and shift gradually so you save face.", axis: "E", score: 1 },
+                    { text: "Stop arguing the original point and steel-man the opposing view.", axis: "L", score: 3 },
+                    { text: "Concede the specific point but defend the broader frame.", axis: "O", score: 2 }
+                ]
+            },
+            {
+                domain: "Decision Making",
+                q: "Two job offers: a 30% pay bump in a stable role, or your current pay in a risky moonshot startup. How do you decide?",
+                opts: [
+                    { text: "Build a decision matrix with weighted criteria — money, learning, optionality, risk.", axis: "A", score: 3 },
+                    { text: "Ask yourself: 'Which would I regret more in 10 years?' and follow that.", axis: "N", score: 2 },
+                    { text: "Weigh which fits the long arc of your career, not the next 12 months.", axis: "B", score: 3 },
+                    { text: "Map specific failure scenarios for each and how recoverable they are.", axis: "D", score: 2 }
+                ]
+            },
+            {
+                domain: "Bias Recognition",
+                q: "You've spent 18 months on a project that's now showing it won't work. Your instinct is to...",
+                opts: [
+                    { text: "Recognize the sunk cost — the 18 months are gone whether I continue or not.", axis: "S", score: 3 },
+                    { text: "Push through — quitting now would waste everything we built.", axis: "O", score: 0 },
+                    { text: "Do a pre-mortem on the next 6 months to see if the math has changed.", axis: "L", score: 3 },
+                    { text: "Talk to the team — they've put in the work and deserve to weigh in.", axis: "E", score: 2 }
+                ]
+            },
+            {
+                domain: "Argument Analysis",
+                q: "A junior teammate has an unconventional idea that contradicts your strategy. You...",
+                opts: [
+                    { text: "Steel-man their idea aloud before responding, even if you disagree.", axis: "L", score: 3 },
+                    { text: "Encourage them to develop it further — fresh perspectives are gold.", axis: "E", score: 2 },
+                    { text: "Ask what assumption of yours they think is wrong, and listen carefully.", axis: "S", score: 3 },
+                    { text: "Acknowledge the creativity and explain why the current strategy stays.", axis: "O", score: 1 }
+                ]
+            },
+            {
+                domain: "Evidence Evaluation",
+                q: "You're researching a topic and the first 5 search results all say the same thing. You...",
+                opts: [
+                    { text: "Specifically search for the strongest counter-arguments before forming a view.", axis: "S", score: 3 },
+                    { text: "If the consensus is that strong, it's probably right — move on.", axis: "O", score: 0 },
+                    { text: "Check whether all 5 trace back to the same original source.", axis: "D", score: 3 },
+                    { text: "Look for who disagrees and why, even if they're a minority.", axis: "L", score: 3 }
+                ]
+            },
+            {
+                domain: "Meta-Cognition",
+                q: "Looking back at your worst decision in the last 5 years, the root cause was usually...",
+                opts: [
+                    { text: "Acting too fast on incomplete information.", axis: "A", score: 2 },
+                    { text: "Over-thinking and missing the right window.", axis: "N", score: 2 },
+                    { text: "Believing the best-case scenario instead of stress-testing it.", axis: "S", score: 3 },
+                    { text: "Ignoring people who were trying to warn me.", axis: "E", score: 3 }
+                ]
+            }
+        ];
+
+        const ARCHETYPES = {
+            ASLB: { name: "The Systems Architect", match: "Like Elon Musk · Marie Curie · Ada Lovelace", desc: "You build mental models of everything and spot structural flaws others miss. Your edge: seeing how parts fit into a whole.", strengths: "Systems thinking, structural rigor, pattern recognition.", blind: "May over-engineer; can underweight emotion and context." },
+            ASLD: { name: "The First-Principles Reasoner", match: "Like Richard Feynman · Charlie Munger", desc: "You won't accept 'because that's how it works' — you deconstruct to fundamentals before rebuilding.", strengths: "Deep analysis, rigorous logic, attention to detail.", blind: "Can get lost in detail; slow to ship under uncertainty." },
+            ASEB: { name: "The Devil's Advocate", match: "Like Socrates · Christopher Hitchens", desc: "You question everything, especially popular opinion, and find the weakness in any argument — but lead with care.", strengths: "Sharp skepticism, ethical instinct, fairness.", blind: "Can come across as combative; may slow group consensus." },
+            ASED: { name: "The Investigator", match: "Like Sherlock Holmes · Woodward & Bernstein", desc: "Methodical, evidence-driven, you catch the details everyone else glosses over.", strengths: "Forensic thinking, evidence chains, source evaluation.", blind: "Can be slow; may resist gut calls when needed." },
+            AOLB: { name: "The Strategist", match: "Like Sun Tzu · Daniel Kahneman", desc: "You see three moves ahead and optimize for long-term outcomes over short-term wins.", strengths: "Long-horizon thinking, scenario planning, pragmatism.", blind: "Can overlook today's tactical wins; may seem detached." },
+            AOLD: { name: "The Optimizer", match: "Like Marie Curie · W. Edwards Deming", desc: "Relentlessly improving processes, data-driven to the core, you compound small gains into big ones.", strengths: "Data fluency, iteration, process discipline.", blind: "May over-optimize on metrics that don't matter most." },
+            AOEB: { name: "The Bridge Builder", match: "Like Nelson Mandela · Satya Nadella", desc: "Analytical yet empathetic — you find solutions that satisfy logic AND people.", strengths: "Synthesis, diplomacy, holistic thinking.", blind: "Can avoid hard tradeoffs in pursuit of consensus." },
+            AOED: { name: "The Craftsperson", match: "Like Ada Lovelace · Linus Torvalds", desc: "Meticulous, methodical, you build things that actually work and care deeply about how they're made.", strengths: "Deep expertise, quality bar, careful execution.", blind: "Can resist shipping until perfect; slow to delegate." },
+            NSLB: { name: "The Pattern Spotter", match: "Like Malcolm Gladwell · Nate Silver", desc: "You see connections others miss and trust intuition backed by skepticism.", strengths: "Cross-domain thinking, narrative pattern-matching.", blind: "Patterns can be illusory — may overfit small samples." },
+            NSLD: { name: "The Myth Buster", match: "Like Carl Sagan · Tim Urban", desc: "Intuitive radar for BS, then verifies with evidence — your superpower is detecting plausible-but-wrong.", strengths: "Calibrated skepticism, source-checking, clear writing.", blind: "Can dismiss novel ideas too quickly." },
+            NSEB: { name: "The Questioner", match: "Like Oprah Winfrey · Brené Brown", desc: "You ask the questions nobody else thinks to ask. People-centered, but never naive.", strengths: "Active listening, empathic inquiry, frame-finding.", blind: "Can prioritize harmony over the harder truth." },
+            NSED: { name: "The Truth Seeker", match: "Like Christiane Amanpour · Ronan Farrow", desc: "You dig until the real story surfaces, driven by fairness and a sharp eye for inconsistency.", strengths: "Tenacious research, ethics, attention to nuance.", blind: "Can get tunnel vision on a single thread." },
+            NOLB: { name: "The Visionary", match: "Like Steve Jobs · Buckminster Fuller", desc: "You see the future in patterns and connect dots across domains others see as unrelated.", strengths: "Bold synthesis, originality, conviction.", blind: "Can underweight logistics; impatient with detail." },
+            NOLD: { name: "The Tinkerer", match: "Like Leonardo da Vinci · Steve Wozniak", desc: "You experiment, iterate, and learn by doing — hands-on intuitive problem solver.", strengths: "Prototyping, curiosity, learning by feedback loop.", blind: "Can wander; may struggle to finish before starting next." },
+            NOEB: { name: "The Empathizer", match: "Like Brené Brown · Fred Rogers", desc: "You lead with understanding, read the room, and think about impact first.", strengths: "Emotional intelligence, motivational clarity, framing.", blind: "Can avoid hard feedback; may delay tough calls." },
+            NOED: { name: "The Storyteller", match: "Like Maya Angelou · David Foster Wallace", desc: "You understand through narrative and make complex ideas relatable and human.", strengths: "Communication, framing, audience awareness.", blind: "Can prioritize a good story over a precise one." }
+        };
+
+        const SCORE_LABELS = [
+            { min: 90, label: "Master Thinker" },
+            { min: 75, label: "Sharp Thinker" },
+            { min: 60, label: "Rising Thinker" },
+            { min: 45, label: "Developing Thinker" },
+            { min: 0, label: "Awakening Thinker" }
+        ];
+
+        let answers = [];
+        let currentQ = 0;
+        let axisScores = { A: 0, N: 0, S: 0, O: 0, L: 0, E: 0, B: 0, D: 0 };
+        let totalRigor = 0;
+
+        function startQuiz() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            currentQ = 0; answers = [];
+            axisScores = { A: 0, N: 0, S: 0, O: 0, L: 0, E: 0, B: 0, D: 0 };
+            totalRigor = 0;
+            renderQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderQuestion() {
+            const q = QUESTIONS[currentQ];
+            document.getElementById('qTag').textContent = q.domain;
+            document.getElementById('qText').textContent = q.q;
+            const optsContainer = document.getElementById('qOptions');
+            optsContainer.innerHTML = '';
+            // Shuffle options so order doesn't bias
+            const shuffled = q.opts.map(o => o).sort(() => Math.random() - 0.5);
+            shuffled.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'option';
+                btn.textContent = opt.text;
+                btn.onclick = () => selectOption(opt);
+                optsContainer.appendChild(btn);
+            });
+            const pct = ((currentQ) / QUESTIONS.length) * 100;
+            document.getElementById('progressFill').style.width = pct + '%';
+            document.getElementById('progressLabel').textContent = `Question ${currentQ + 1} of ${QUESTIONS.length}`;
+        }
+
+        function selectOption(opt) {
+            axisScores[opt.axis] += 1;
+            totalRigor += opt.score;
+            answers.push(opt);
+            currentQ++;
+            if (currentQ >= QUESTIONS.length) {
+                showResult();
+            } else {
+                renderQuestion();
+            }
+        }
+
+        function pickPole(p1, p2) {
+            // Tie -> p1 (deterministic)
+            return axisScores[p1] >= axisScores[p2] ? p1 : p2;
+        }
+        function pct(p1, p2) {
+            const total = axisScores[p1] + axisScores[p2];
+            return total === 0 ? 50 : Math.round((axisScores[p1] / total) * 100);
+        }
+
+        function showResult() {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('progressFill').style.width = '100%';
+
+            const code = pickPole('A', 'N') + pickPole('S', 'O') + pickPole('L', 'E') + pickPole('B', 'D');
+            const arch = ARCHETYPES[code] || ARCHETYPES.ASLB;
+
+            document.getElementById('rCode').textContent = code;
+            document.getElementById('rName').textContent = arch.name;
+            document.getElementById('rArchetypeName').textContent = arch.name;
+            document.getElementById('rArchetypeDesc').textContent = arch.desc;
+            document.getElementById('rMatch').textContent = arch.match;
+            document.getElementById('rStrengths').textContent = arch.strengths;
+            document.getElementById('rBlindSpots').textContent = arch.blind;
+
+            // Score: rigor / max-possible normalized to 0-100
+            const maxRigor = QUESTIONS.length * 3;
+            const score = Math.round((totalRigor / maxRigor) * 100);
+            const label = SCORE_LABELS.find(s => score >= s.min).label;
+            document.getElementById('rScore').textContent = score;
+            document.getElementById('rScoreLabel').textContent = `/ 100 — ${label}`;
+
+            // Axes — show the 4 dominant poles with their %
+            const axesEl = document.getElementById('rAxes');
+            const axisPairs = [
+                ['A', 'N', 'Analytical', 'Intuitive'],
+                ['S', 'O', 'Skeptical', 'Open'],
+                ['L', 'E', 'Logic-First', 'Empathy'],
+                ['B', 'D', 'Big-Picture', 'Detail']
+            ];
+            axesEl.innerHTML = '';
+            axisPairs.forEach(([p1, p2, n1, n2]) => {
+                const dom = axisScores[p1] >= axisScores[p2] ? { name: n1, pct: pct(p1, p2) } : { name: n2, pct: pct(p2, p1) };
+                const row = document.createElement('div');
+                row.className = 'axis-row';
+                row.innerHTML = `<span class="axis-name">${dom.name}</span><div class="axis-bar"><div class="axis-fill" style="width: ${dom.pct}%"></div></div><span class="axis-pct">${dom.pct}%</span>`;
+                axesEl.appendChild(row);
+            });
+
+            // Share buttons
+            const shareUrl = 'https://triveer.ai/thinqr/mindtype/';
+            const shareText = `My ThinQr Mind Type is ${code} — ${arch.name}. Find yours in 3 minutes:`;
+            document.getElementById('shareTwitter').href =
+                'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+            document.getElementById('shareLinkedIn').href =
+                'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+            document.getElementById('shareFacebook').href =
+                'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function retake() {
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('intro').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Auto-start when arriving with ?start=1 (deep-link from main site)
+        if (new URLSearchParams(window.location.search).get('start') === '1') {
+            startQuiz();
+        }
+
+        // Instagram (copy link since no web intent exists)
+        document.getElementById('shareInstagram').addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText('https://triveer.ai/thinqr/mindtype/');
+                document.getElementById('igLabel').textContent = 'Copied Link!';
+                setTimeout(() => { document.getElementById('igLabel').textContent = 'Instagram'; }, 2000);
+            } catch {
+                document.getElementById('igLabel').textContent = 'Press Ctrl+C';
+            }
+        });
+
+        // Copy link button
+        document.getElementById('shareCopy').addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText('https://triveer.ai/thinqr/mindtype/');
+                document.getElementById('copyLabel').textContent = 'Copied!';
+                setTimeout(() => { document.getElementById('copyLabel').textContent = 'Copy Link'; }, 2000);
+            } catch {
+                document.getElementById('copyLabel').textContent = 'Press Ctrl+C';
+            }
+        });
+    </script>
+</body>
+
+</html>
