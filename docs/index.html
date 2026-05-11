@@ -2296,10 +2296,17 @@
         .pv-slide:hover .pv-frame::after {
             opacity: 1;
         }
+            .skip-to-main { position: absolute; top: -100px; left: 8px; background: #000; color: #fff; padding: 10px 16px; border-radius: 6px; z-index: 9999; text-decoration: none; font-weight: 600; }
+        .skip-to-main:focus { top: 8px; outline: 2px solid #fff; }
+             (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+        }
+            a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [role="button"]:focus-visible { outline: 3px solid #00F7FF; outline-offset: 2px; border-radius: 4px; }
     </style>
 </head>
 
 <body>
+    <a href="#hero" class="skip-to-main">Skip to main content</a>
 
     <canvas id="stars"></canvas>
 

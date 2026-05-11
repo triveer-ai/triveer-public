@@ -1933,7 +1933,7 @@
         }
 
         .compare-table .cross .label {
-            color: rgba(230, 237, 243, 0.45);
+            color: rgba(230, 237, 243, 0.72);
             font-weight: 500;
         }
 
@@ -2179,10 +2179,14 @@
                 padding: 24px 20px;
             }
         }
+            .skip-to-main { position: absolute; top: -100px; left: 8px; background: #000; color: #fff; padding: 10px 16px; border-radius: 6px; z-index: 9999; text-decoration: none; font-weight: 600; }
+        .skip-to-main:focus { top: 8px; outline: 2px solid #fff; }
+            a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [role="button"]:focus-visible { outline: 3px solid #6C5CE7; outline-offset: 2px; border-radius: 4px; }
     </style>
 </head>
 
 <body>
+    <a href="#hero" class="skip-to-main">Skip to main content</a>
     <canvas id="stars"></canvas>
 
     <!-- ======= NAV ======= -->
@@ -4204,7 +4208,7 @@
             </p>
             <form class="waitlist-form reveal" id="wl-form" novalidate>
                 <input type="text" name="website" id="wl-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
-                <input type="email" class="waitlist-input" id="wl-email" placeholder="your@email.com"
+                <input type="email" class="waitlist-input" id="wl-email" placeholder="your@email.com" aria-label="Email address for ThinQr launch notification"
                     autocomplete="email" required>
                 <button type="submit" class="btn btn-primary" id="wl-btn">Notify Me</button>
             </form>
@@ -4329,8 +4333,8 @@
             <p>Have a great idea for a new trail, or spotted something that could be better? Let us know!</p>
             <form id="fb-form" novalidate>
                 <input type="text" name="website" id="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
-                <textarea id="fb-text" class="fb-textarea" placeholder="Tell us your idea..." required></textarea>
-                <input type="email" id="fb-email" class="waitlist-input" placeholder="Your email so we can follow up"
+                <textarea id="fb-text" class="fb-textarea" placeholder="Tell us your idea..." required aria-label="Your feedback or idea"></textarea>
+                <input type="email" id="fb-email" class="waitlist-input" placeholder="Your email so we can follow up" aria-label="Your email for feedback follow-up"
                     autocomplete="email" required style="margin-bottom: 24px; width: 100%;">
                 <div style="display: flex; gap: 12px; width: 100%;">
                     <button type="submit" id="fb-btn" class="btn btn-primary"
@@ -4351,7 +4355,7 @@
             <p>Did something go wrong or look broken? Let us know so we can fix it.</p>
             <form id="issue-form" novalidate>
                 <input type="text" name="website" id="issue-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
-                <textarea id="issue-text" class="fb-textarea" placeholder="How to reproduce the issue..."
+                <textarea id="issue-text" class="fb-textarea" placeholder="How to reproduce the issue..." aria-label="Describe how to reproduce the issue"
                     required></textarea>
                 <input type="email" id="issue-email" class="waitlist-input"
                     placeholder="Your email (so we can follow up)" autocomplete="email" required
@@ -4485,7 +4489,12 @@
             setupModal('feedback', 'fb-modal', 'fb-close');
             setupModal('issues', 'issue-modal', 'issue-close');
 
-            // Form-type → list mapping is resolved server-side from `type` + `app` fields.
+            // Brevo list IDs (Folder: Thinqr) — list IDs are not credentials, safe to expose.
+            const BREVO_LISTS = {
+                waitlist: 10,   // ThinQr Waitlist
+                feedback: 11,   // ThinQr Ideas
+                issue: 12       // ThinQr Issues
+            };
 
             // Form submission
             function setupForm(formId, textId, emailId, btnId, msgId, type) {
@@ -4511,7 +4520,8 @@
                                 email: email.value.trim(),
                                 content: text.value.trim(),
                                 type,
-                                app: 'thinqr'
+                                app: 'thinqr',
+                                listId: BREVO_LISTS[type]
                             })
                         });
                         msg.textContent = type === 'feedback' ? 'Thanks for your feedback! 💡' : 'Thanks for reporting! 🛠️';
@@ -4548,7 +4558,8 @@
                         body: JSON.stringify({
                             email: wlEmail.value.trim(),
                             type: 'waitlist',
-                            app: 'thinqr'
+                            app: 'thinqr',
+                            listId: BREVO_LISTS.waitlist
                         })
                     });
                     wlMsg.textContent = "You're in! We'll email you at launch. 🧠"; wlMsg.style.color = '#2EA043';

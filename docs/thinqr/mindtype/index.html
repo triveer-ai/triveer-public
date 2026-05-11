@@ -505,10 +505,14 @@
                 transition: none !important;
             }
         }
+            .skip-to-main { position: absolute; top: -100px; left: 8px; background: #000; color: #fff; padding: 10px 16px; border-radius: 6px; z-index: 9999; text-decoration: none; font-weight: 600; }
+        .skip-to-main:focus { top: 8px; outline: 2px solid #fff; }
+            a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [role="button"]:focus-visible { outline: 3px solid #6C5CE7; outline-offset: 2px; border-radius: 4px; }
     </style>
 </head>
 
 <body>
+    <a href="#main" class="skip-to-main">Skip to main content</a>
     <nav>
         <a href="../index.html" class="nav-logo">
             <img src="../assets/thinqr-logo-200.png" alt="ThinQr logo" width="32" height="32">
@@ -517,7 +521,7 @@
         <a href="../index.html" class="back">← Back to ThinQr</a>
     </nav>
 
-    <main>
+    <main id="main">
         <!-- Intro -->
         <section id="intro" class="intro">
             <h1>What's Your <span class="grad">ThinQr Mind Type</span>?</h1>
@@ -550,7 +554,7 @@
             </div>
             <div class="question-card" id="questionCard">
                 <span class="q-tag" id="qTag">Bias Recognition</span>
-                <h3 id="qText">Loading...</h3>
+                <h2 id="qText">Loading...</h2>
                 <div class="options" id="qOptions"></div>
             </div>
         </section>
@@ -571,15 +575,15 @@
                 </div>
 
                 <div class="strengths">
-                    <h4 id="rArchetypeName">The Systems Architect</h4>
+                    <h3 id="rArchetypeName">The Systems Architect</h3>
                     <p id="rArchetypeDesc">Loading...</p>
                     <div class="pair">
                         <div>
-                            <h4 style="color: var(--accent-green); margin-top: 12px;">Strengths</h4>
+                            <h3 style="color: var(--accent-green); margin-top: 12px;">Strengths</h3>
                             <p id="rStrengths"></p>
                         </div>
                         <div>
-                            <h4 style="color: var(--accent-teal); margin-top: 12px;">Watch out for</h4>
+                            <h3 style="color: var(--accent-teal); margin-top: 12px;">Watch out for</h3>
                             <p id="rBlindSpots"></p>
                         </div>
                     </div>

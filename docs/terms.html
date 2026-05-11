@@ -256,10 +256,17 @@
             .pp-hero { padding: 56px 18px 40px; }
             .pp-section { padding: 22px 20px; }
         }
+            .skip-to-main { position: absolute; top: -100px; left: 8px; background: #000; color: #fff; padding: 10px 16px; border-radius: 6px; z-index: 9999; text-decoration: none; font-weight: 600; }
+        .skip-to-main:focus { top: 8px; outline: 2px solid #fff; }
+             (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+        }
+            a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [role="button"]:focus-visible { outline: 3px solid #00F7FF; outline-offset: 2px; border-radius: 4px; }
     </style>
 </head>
 
 <body>
+    <a href="#main" class="skip-to-main">Skip to main content</a>
 
     <!-- NAV -->
     <nav>
@@ -284,7 +291,7 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="pp-content">
+    <div class="pp-content" id="main">
         
         <div class="pp-section">
             <p>By downloading, installing, or using any applications or websites provided by TriVeer AI, including but not limited to KAID (Kids AI Dojo) and ThinQr (collectively, the "Services"), you agree to these Terms of Service. If you do not agree, please do not use the Services.</p>
